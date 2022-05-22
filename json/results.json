@@ -1,0 +1,138 @@
+{
+    "RegDecMsg": {
+        "Hdr": {
+            "@Id": "D052",
+            "@Ver": "D051"
+        },
+        "Bd": {
+            "GenReq": [
+                {
+                    "GenrcRqCritr": [
+                        {
+                            "@TyCd": "CstRqMsgFmtId",
+                            "Val": [
+                                "D001"
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "RegDec": {
+                "DocId": "D002",
+                "RegDecNo": "D003",
+                "TyCd": "D004",
+                "Fnc": "D005",
+                "ExpDt": "D006",
+                "St": [
+                    {
+                        "StCd": [
+                            {
+                                "$": "D007",
+                                "@TyCd": "CLR",
+                                "@Dtm": "D007"
+                            },
+                            {
+                                "$": "RENTY",
+                                "@TyCd": "CLR",
+                                "@Dtm": "D008"
+                            },
+                            {
+                                "$": "ENTYS",
+                                "@TyCd": "CLR",
+                                "@Dtm": "D009"
+                            }
+                        ]
+                    }
+                ],
+                "AcpDt": "D010",
+                "DatElGrp": [
+                    {
+                        "@Cd": "DuePayDt",
+                        "DatEl": [
+                            {
+                                "Cd": "PayDt",
+                                "Val": "D011"
+                            },
+                            {
+                                "Cd": "PayTyCd",
+                                "Val": "D012"
+                            }
+                        ]
+                    }
+                ],
+                "Meas": [
+                    {
+                        "@TyCd": "TOT",
+                        "NetWgt": {
+                            "@Uom": "D013"
+                        },
+                        "GrossWgt": {
+                            "@Uom": "D014"
+                        }
+                    }
+                ],
+                "TotNoOfArtcl": "D015",
+                "AscDoc": [
+                    {
+                        "DocTyCd": "ENT",
+                        "DocId": "D016"
+                    }
+                ],
+                "GovProcTyCd": "D017",
+                "BsnPty": [
+                    {
+                        "RolTyCd": "BR",
+                        "BsnpTyCd": "D018"
+                    }
+                ],
+                "CurCd": "D019",
+                "MonAmt": [
+                    {
+                        "@TyCd": "TCSCH",
+                        "Amt": [
+                            {
+                                "$": "D020"
+                            },
+                            {
+                                "@CurCd": "D020"
+                            }
+                        ]
+                    },
+                    {
+                        "@TyCd": "TLHCH",
+                        "Amt": [
+                            {
+                                "$": "D021"
+                            },
+                            {
+                                "@CurCd": "D021"
+                            }
+                        ]
+                    },
+                    {
+                        "@TyCd": "TOTAX",
+                        "Amt": [
+                            {
+                                "$": "D022"
+                            },
+                            {
+                                "@CurCd": "D022"
+                            }
+                        ]
+                    },
+                    {
+                        "@TyCd": "TDCBV",
+                        "Amt": [
+                            {
+                                "$": "D047"
+                            },
+                            {
+                                "@CurCd": "D047"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

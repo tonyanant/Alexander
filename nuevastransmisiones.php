@@ -1,612 +1,704 @@
 <?php
 
-	//variables
-	
-$GenrcRqCritrTyCd='CstRqMsgFmtId';
-$GenrcRqCritrVal='D001';
-
-$DocId='D002';
-$RegDecNo='D003';
-$TyCd='D004';
-$Fnc='D005';
-$ExpDt='D006';
-
-$StStCd1='D007';
-$StStCdTyCd1='CLR';
-$StStCdDtm1='D007';
-$StStCd2='RENTY';
-$StStCdTyCd2='CLR';
-$StStCdDtm2='D008';
-$StStCd3='ENTYS';
-$StStCdTyCd3='CLR';
-$StStCdDtm3='D009';
-$AcpDt='D010';
-
-$DatElGrpCd='DuePayDt';
-
-$DatElGrpDatElCd1='PayDt';
-$DatElGrpDatElVal1='D011';
-
-$DatElGrpDatElCd2='PayTyCd';
-$DatElGrpDatElVal2='D012';
-
-$MeasTyCd='TOT';
-$MeasNetWgt='D013';
-$MeasNetWgtUom='D013';
-$MeasGrossWgt='D014';
-$MeasGrossWgtUom='D014';
-$TotNoOfArtcl='D015';
-
-$AscDocDocTyCd='ENT';
-$AscDocDocId ='D016';
-$GovProcTyCd ='D017';
-
-$BsnPtyRolTyCd='BR';
-$BsnPtyBsnpTyCd='D018';
-$CurCd='D019';
-
-$MonAmtTyCd='TCSCH';
-$MonAmtAmt='D020';
-$MonAmtAmtCurCd='D020';
-
-$MonAmtTyCd2='TLHCH';
-$MonAmtAmt2='D021';
-$MonAmtAmtCurCd2='D021';
-
-$MonAmtTyCd3='TOTAX';
-$MonAmtAmt3='D022';
-$MonAmtAmtCurCd3='D022';
-
-$CustChrgTyCd='To be confirmed';
-$CustChrgCat='TAX';
-$CustChrgAmt='D023';
-$CustChrgAmtCurCd='D023';
-
-$CustChrgTyCd2='EXC';
-$CustChrgCat2='TAX';
-$CustChrgAmt2='D024';
-$CustChrgAmtCurCd2='D024';
-
-$CustChrgTyCd3='VAT';
-$CustChrgCat3='TAX';
-$CustChrgAmt3='D025';
-$CustChrgAmtCurCd3='D025';
-
-$CustChrgTyCd4='TAX';
-$CustChrgCat4='TAX';
-$CustChrgAmt4='D026';
-$CustChrgAmtCurCd4='D026';
-
-$CustChrgTyCd5='UOT';
-$CustChrgCat5='TAX';
-$CustChrgAmt5='D027';
-$CustChrgAmtCurCd5='D027';
-
-$CustChrgTyCd6='POX';
-$CustChrgCat6='TAX';
-$CustChrgAmt6='D028';
-$CustChrgAmtCurCd6='D028';
-
-$CustChrgTyCd7='ADD';
-$CustChrgCat7='DUTY';
-$CustChrgAmt7='D029';
-$CustChrgAmtCurCd7='D029';
-
-$CustChrgTyCd8='CVD';
-$CustChrgCat8='DUTY';
-$CustChrgAmt8='D030';
-$CustChrgAmtCurCd8='D030';
-
-$CustChrgTyCd9='DTY';
-$CustChrgCat9='DUTY';
-$CustChrgAmt9='D031';
-$CustChrgAmtCurCd9='D031';
+//variables
+
+$GenrcRqCritrTyCd = 'CstRqMsgFmtId';
+$GenrcRqCritrVal = 'D001';
 
-$CustChrgTyCd10='ADT';
-$CustChrgCat10='DUTY';
-$CustChrgAmt10='D032';
-$CustChrgAmtCurCd10='D032';
+$DocId = 'D002';
+$RegDecNo = 'D003';
+$TyCd = 'D004';
+$Fnc = 'D005';
+$ExpDt = 'D006';
+
+
+$StStCd1 = 'D007';
+$StStCdTyCd1 = 'CLR';
+$StStCdDtm1 = 'D007';
+
+$StStCd2 = 'RENTY';
+$StStCdTyCd2 = 'CLR';
+$StStCdDtm2 = 'D008';
+
+$StStCd3 = 'ENTYS';
+$StStCdTyCd3 = 'CLR';
+$StStCdDtm3 = 'D009';
+
+
+$AcpDt = 'D010';
+
+$DatElGrpCd = 'DuePayDt';
+
+$DatElGrpDatElCd1 = 'PayDt';
+$DatElGrpDatElVal1 = 'D011';
+
+$DatElGrpDatElCd2 = 'PayTyCd';
+$DatElGrpDatElVal2 = 'D012';
+
+$MeasTyCd = 'TOT';
+$MeasNetWgt = 'D013';
+$MeasNetWgtUom = 'D013';
+$MeasGrossWgt = 'D014';
+$MeasGrossWgtUom = 'D014';
+$TotNoOfArtcl = 'D015';
+
+$AscDocDocTyCd = 'ENT';
+$AscDocDocId = 'D016';
+$GovProcTyCd = 'D017';
+
+$BsnPtyRolTyCd = 'BR';
+$BsnPtyBsnpTyCd = 'D018';
+$CurCd = 'D019';
+
+// MonAmt data
+$MonAmtTyCd = 'TCSCH';
+$MonAmtAmt = 'D020';
+$MonAmtAmtCurCd = 'D020';
+
+$MonAmtTyCd2 = 'TLHCH';
+$MonAmtAmt2 = 'D021';
+$MonAmtAmtCurCd2 = 'D021';
+
+$MonAmtTyCd3 = 'TOTAX';
+$MonAmtAmt3 = 'D022';
+$MonAmtAmtCurCd3 = 'D022';
+
+$MonAmtTyCd4 = 'TDCBV';
+$MonAmtAmt4 = 'D047';
+$MonAmtAmtCurCd4 = 'D047';
+
+// CustChrg data
+$CustChrgTyCd = 'To be confirmed';
+$CustChrgCat = 'TAX';
+$CustChrgAmt = 'D023';
+$CustChrgAmtCurCd = 'D023';
+
+$CustChrgTyCd2 = 'EXC';
+$CustChrgCat2 = 'TAX';
+$CustChrgAmt2 = 'D024';
+$CustChrgAmtCurCd2 = 'D024';
+
+$CustChrgTyCd3 = 'VAT';
+$CustChrgCat3 = 'TAX';
+$CustChrgAmt3 = 'D025';
+$CustChrgAmtCurCd3 = 'D025';
 
-$CustChrgTyCd11='QUA';
-$CustChrgCat11='FEE';
-$CustChrgAmt11='D033';
-$CustChrgAmtCurCd11='D033';
+$CustChrgTyCd4 = 'TAX';
+$CustChrgCat4 = 'TAX';
+$CustChrgAmt4 = 'D026';
+$CustChrgAmtCurCd4 = 'D026';
 
-$CustChrgTyCd12='MPF';
-$CustChrgCat12='FEE';
-$CustChrgAmt12='D034';
-$CustChrgAmtCurCd12='D034';
+$CustChrgTyCd5 = 'UOT';
+$CustChrgCat5 = 'TAX';
+$CustChrgAmt5 = 'D027';
+$CustChrgAmtCurCd5 = 'D027';
 
-$CustChrgTyCd13='PEN';
-$CustChrgCat13='FEE';
-$CustChrgAmt13='D035';
-$CustChrgAmtCurCd13='D035';
+$CustChrgTyCd6 = 'POX';
+$CustChrgCat6 = 'TAX';
+$CustChrgAmt6 = 'D028';
+$CustChrgAmtCurCd6 = 'D028';
 
-$CustChrgTyCd14='TZP';
-$CustChrgCat14='FEE';
-$CustChrgAmt14='D036';
-$CustChrgAmtCurCd14='D036';
+$CustChrgTyCd7 = 'ADD';
+$CustChrgCat7 = 'DUTY';
+$CustChrgAmt7 = 'D029';
+$CustChrgAmtCurCd7 = 'D029';
 
-$CustChrgTyCd15='REG';
-$CustChrgCat15='FEE';
-$CustChrgAmt15='D037';
-$CustChrgAmtCurCd15='D037';
+$CustChrgTyCd8 = 'CVD';
+$CustChrgCat8 = 'DUTY';
+$CustChrgAmt8 = 'D030';
+$CustChrgAmtCurCd8 = 'D030';
 
-$CustChrgTyCd16='DTF';
-$CustChrgCat16='FEE';
-$CustChrgAmt16='D038';
-$CustChrgAmtCurCd16='D038';
+$CustChrgTyCd9 = 'DTY';
+$CustChrgCat9 = 'DUTY';
+$CustChrgAmt9 = 'D031';
+$CustChrgAmtCurCd9 = 'D031';
 
-$GISrcDtm='D039';
-$GISrcAppNm='D040';
-$GISrcCtryCd='D041';
-$GISrcFcId='D042';
-$GICorrId='D049';
+$CustChrgTyCd10 = 'ADT';
+$CustChrgCat10 = 'DUTY';
+$CustChrgAmt10 = 'D032';
+$CustChrgAmtCurCd10 = 'D032';
 
-$PrefTreatmentInd='D043';
-$PrefTreatmentTyCd='D044';
-$PrefTreatmentNm='D045';
+$CustChrgTyCd11 = 'QUA';
+$CustChrgCat11 = 'FEE';
+$CustChrgAmt11 = 'D033';
+$CustChrgAmtCurCd11 = 'D033';
 
-$CustChrgTyCd17='To be confirmed';
-$CustChrgCat17='TAX';
-$CustChrgAmt17='D046';
-$CustChrgAmtCurCd17='D046';
+$CustChrgTyCd12 = 'MPF';
+$CustChrgCat12 = 'FEE';
+$CustChrgAmt12 = 'D034';
+$CustChrgAmtCurCd12 = 'D034';
 
-$MonAmtTyCd4='TDCBV';
-$MonAmtAmt4='D047';
-$MonAmtAmtCurCd4='D047';
-$ExchRt='D048';
-$ExchRtTyCd='D048';
-$ExchRtBCurCd='D048';
-$ExchRtOCurCd='D048';
+$CustChrgTyCd13 = 'PEN';
+$CustChrgCat13 = 'FEE';
+$CustChrgAmt13 = 'D035';
+$CustChrgAmtCurCd13 = 'D035';
 
-$ReglBdCd='D056';
+$CustChrgTyCd14 = 'TZP';
+$CustChrgCat14 = 'FEE';
+$CustChrgAmt14 = 'D036';
+$CustChrgAmtCurCd14 = 'D036';
 
+$CustChrgTyCd15 = 'REG';
+$CustChrgCat15 = 'FEE';
+$CustChrgAmt15 = 'D037';
+$CustChrgAmtCurCd15 = 'D037';
 
+$CustChrgTyCd16 = 'DTF';
+$CustChrgCat16 = 'FEE';
+$CustChrgAmt16 = 'D038';
+$CustChrgAmtCurCd16 = 'D038';
 
+$CustChrgTyCd17 = 'To be confirmed';
+$CustChrgCat17 = 'TAX';
+$CustChrgAmt17 = 'D046';
+$CustChrgAmtCurCd17 = 'D046';
 
-$CustAddrFrmtAddrPosCont='D057';
-$CustAddrFrmtAddrPosContFmtTyCd='LINES';
-$CustAddrFrmtAddrPosContId='1';
+$GISrcDtm = 'D039';
+$GISrcAppNm = 'D040';
+$GISrcCtryCd = 'D041';
+$GISrcFcId = 'D042';
+$GICorrId = 'D049';
 
-$DngGdsInd='D058';
+$PrefTreatmentInd = 'D043';
+$PrefTreatmentTyCd = 'D044';
+$PrefTreatmentNm = 'D045';
 
-$ReaForTrCd='D059';
+$ExchRt = 'D048';
+$ExchRtTyCd = 'D048';
+$ExchRtBCurCd = 'D048';
+$ExchRtOCurCd = 'D048';
 
-$CustomsFormDescription='D060';
+$ReglBdCd = 'D056';
 
 
-$RespStatusSev='10';
-$RespStatusMsgClg='DR01';
-$RespStatusMsgCIgd='DR01';
-$RespStatusDsc='DR02';
 
-$RespStatusGISrcDtm='DR03';
 
+$CustAddrFrmtAddrPosCont = 'D057';
+$CustAddrFrmtAddrPosContFmtTyCd = 'LINES';
+$CustAddrFrmtAddrPosContId = '1';
 
-$MvmtMvmtKeyMvmtNo='M001';
-$MvmtMvmtKeyMvmtDt='M001';
+$DngGdsInd = 'D058';
 
-$MvmtCrrNm='M002';
-$MvmtCrrBsnPtyCd='M003';
+$ReaForTrCd = 'D059';
 
-$MvmtVehVehId='M004';
-$MvmtVehMdOfTrns='M005';
-$MvmtVehFleetTy='M006';
-$MvmtVehVehRgsN='M007';
-$MvmtVehRgsCtryCd='M008';
-$MvmtDptDtm='M009';
-$MvmtArrDtm='M010';
+$CustomsFormDescription = 'D060';
 
-$MvmtDatElGrpCd='CtryCd';
 
-$MvmtDatElGrpDatElCd='OrgnCtry';
-$MvmtDatElGrpDatElVal='M011';
-$MvmtOrgSrvaCd='M012';
-$MvmtOrgIATACd='M013';
-$MvmtDstSrvaCd='M014';
-$MvmtDstIATACd='M015';
+$RespStatusSev = '10';
+$RespStatusMsgClg = 'DR01';
+$RespStatusMsgCIgd = 'DR01';
+$RespStatusDsc = 'DR02';
 
-$MvmtDocTyCd='MWB';
-$MvmtDocId='M016';
+$RespStatusGISrcDtm = 'DR03';
 
-$MvmtDocPcsInDocPcsId='M017';
-$MvmtDocPcsInDocShpId='M021';
 
+$MvmtMvmtKeyMvmtNo = 'M001';
+$MvmtMvmtKeyMvmtDt = 'M001';
 
-$MvmtDocShpInDocShpkey='HWB';
-$MvmtDoc='M016';
+$MvmtCrrNm = 'M002';
+$MvmtCrrBsnPtyCd = 'M003';
 
+$MvmtVehVehId = 'M004';
+$MvmtVehMdOfTrns = 'M005';
+$MvmtVehFleetTy = 'M006';
+$MvmtVehVehRgsN = 'M007';
+$MvmtVehRgsCtryCd = 'M008';
+$MvmtDptDtm = 'M009';
+$MvmtArrDtm = 'M010';
 
-$MvmtDocHuInDocHuId='M023';
+$MvmtDatElGrpCd = 'CtryCd';
 
+$MvmtDatElGrpDatElCd = 'OrgnCtry';
+$MvmtDatElGrpDatElVal = 'M011';
+$MvmtOrgSrvaCd = 'M012';
+$MvmtOrgIATACd = 'M013';
+$MvmtDstSrvaCd = 'M014';
+$MvmtDstIATACd = 'M015';
 
-$MvmtDocDatElGrpCd='CommonGrp';
+$MvmtDocTyCd = 'MWB';
+$MvmtDocId = 'M016';
 
-$MvmtDocDatElGrpDatElCd='NPcs';
-$MvmtDocDatElGrpDatElVal='M018';
+$MvmtDocPcsInDocPcsId = 'M017';
+$MvmtDocPcsInDocShpId = 'M021';
 
-$MvmtDocDatElGrpCd1='Meas';
 
-$MvmtDocDatElGrpDatElCd2='TyCd';
-$MvmtDocDatElGrpDatElVal2='ACT';
+$MvmtDocShpInDocShpkey = 'HWB';
+$MvmtDoc = 'M016';
 
-$MvmtDocDatElGrpDatElCd3='WgtUom';
-$MvmtDocDatElGrpDatElVal3='M019';
 
-$MvmtDocDatElGrpDatElCd4='NetWgt';
-$MvmtDocDatElGrpDatElVal4='M019';
+$MvmtDocHuInDocHuId = 'M023';
 
-$MvmtDocDatElGrpCd3='Meas';
 
-$MvmtDocDatElGrpDatElCd5='TyCd';
-$MvmtDocDatElGrpDatElVal5='DEC';
+$MvmtDocDatElGrpCd = 'CommonGrp';
 
-$MvmtDocDatElGrpDatElCd6='WgtUom';
-$MvmtDocDatElGrpDatElVal6='M020';
+$MvmtDocDatElGrpDatElCd = 'NPcs';
+$MvmtDocDatElGrpDatElVal = 'M018';
 
-$MvmtDocDatElGrpDatElCd7='GrossWgt';
-$MvmtDocDatElGrpDatElVal7='M020';
+$MvmtDocDatElGrpCd1 = 'Meas';
 
+$MvmtDocDatElGrpDatElCd2 = 'TyCd';
+$MvmtDocDatElGrpDatElVal2 = 'ACT';
 
-$MvmtMvmtKey='At border';
+$MvmtDocDatElGrpDatElCd3 = 'WgtUom';
+$MvmtDocDatElGrpDatElVal3 = 'M019';
 
-$MvmtMvmtKeyMvmtNo2='M024';
+$MvmtDocDatElGrpDatElCd4 = 'NetWgt';
+$MvmtDocDatElGrpDatElVal4 = 'M019';
 
+$MvmtDocDatElGrpCd3 = 'Meas';
 
-$MvmtMvmtKey2='At border';
+$MvmtDocDatElGrpDatElCd5 = 'TyCd';
+$MvmtDocDatElGrpDatElVal5 = 'DEC';
 
-$MvmtMvmtKeyMvmtNo3='M025';
+$MvmtDocDatElGrpDatElCd6 = 'WgtUom';
+$MvmtDocDatElGrpDatElVal6 = 'M020';
 
+$MvmtDocDatElGrpDatElCd7 = 'GrossWgt';
+$MvmtDocDatElGrpDatElVal7 = 'M020';
 
-$MvmtMvmtKey3='At departure';
 
-$Mvmt='M026';
+$MvmtMvmtKey = 'At border';
 
+$MvmtMvmtKeyMvmtNo2 = 'M024';
 
-$MvmtProcTy='At arrival';
 
-$MvmtMvmtKeyMvmtNo4='M027';
+$MvmtMvmtKey2 = 'At border';
 
+$MvmtMvmtKeyMvmtNo3 = 'M025';
 
-$ShpShpKey='S001';
-$ShpOrgSrvACd='S002';
-$ShpDstSrvACd='S003';
-$ShpActNPcs='S004';
 
-$ShpMeasTyCd='DEC';
-$ShpMeasWgt='S005';
-$ShpMeasWgtUOM='S005';
+$MvmtMvmtKey3 = 'At departure';
 
-$ShpMeasTyCd2='ACT';
-$ShpMeasNetWgt='S006';
-$ShpMeasNetWgtUOM='S006';
-$ShpIncTrmCd='S007';
-$ShpPwkInd='S008';
-$ShpRelCoInd='S009';
-$ShpRtdExTrInd='S010';
-$ShpDsc='S011';
-$ShpLngCd='S012';
-$ShpEntrCstOfcCd='S013';
-$ShpExitCstOfcCd='S014';
-$ShpPlcOfLoadCd='S015';
-$ShpPlcOfDischCd='S016';
+$Mvmt = 'M026';
 
-$ShpCustCustId='S017';
-$ShpCustNtwAccNo='S018';
-$ShpCustCustRmk='S019';
-$ShpCustCustRolTyCd='S020';
 
+$MvmtProcTy = 'At arrival';
 
-$ShpCustAddrGILngCd='S055';
+$MvmtMvmtKeyMvmtNo4 = 'M027';
 
 
+$ShpShpKey = 'S001';
+$ShpOrgSrvACd = 'S002';
+$ShpDstSrvACd = 'S003';
+$ShpActNPcs = 'S004';
 
-$ShpCustAddrBsnPtyIndvNm='S022';
+$ShpMeasTyCd = 'DEC';
+$ShpMeasWgt = 'S005';
+$ShpMeasWgtUOM = 'S005';
 
-$ShpCustAddrBsnPtyOrgnNm='S023';
+$ShpMeasTyCd2 = 'ACT';
+$ShpMeasNetWgt = 'S006';
+$ShpMeasNetWgtUOM = 'S006';
+$ShpIncTrmCd = 'S007';
+$ShpPwkInd = 'S008';
+$ShpRelCoInd = 'S009';
+$ShpRtdExTrInd = 'S010';
+$ShpDsc = 'S011';
+$ShpLngCd = 'S012';
+$ShpEntrCstOfcCd = 'S013';
+$ShpExitCstOfcCd = 'S014';
+$ShpPlcOfLoadCd = 'S015';
+$ShpPlcOfDischCd = 'S016';
 
-$ShpCustAddrBsnPtyRgsNo='S024';
-$ShpCustAddrBsnPtyRgsCtryCd='S025';
-$ShpCustAddrBsnPtyRgsTyCd='S026';
+$ShpCustCustId = 'S017';
+$ShpCustNtwAccNo = 'S018';
+$ShpCustCustRmk = 'S019';
+$ShpCustCustRolTyCd = 'S020';
 
-$ShpCustAddrFrmtAddrPosCont='S027';
-$ShpCustAddrFrmtAddrPosContFmtTyCd='LINES';
-$ShpCustAddrFrmtAddrPosContId='1';
-$ShpCustAddrFrmtAddrPosCont2='S028';
-$ShpCustAddrFrmtAddrPosContFmtTyCd2='LINES';
-$ShpCustAddrFrmtAddrPosContId2='2';
-$ShpCustAddrFrmtAddrPosCont3='S029';
-$ShpCustAddrFrmtAddrPosContFmtTyCd3='LINES';
-$ShpCustAddrFrmtAddrPosContId3='3';
 
+$ShpCustAddrGILngCd = 'S055';
 
-$ShpCustAddrActPntSpLtyCtyNm='S030';
-$ShpCustAddrActPntSpLtyZip='S031';
 
-$ShpCustAddrActPntSpLtyCtryDivTyCd='S';
-$ShpCustAddrActPntSpLtyCtryDivNm='S032';
-$ShpCustAddrActPntSpCtryNm='S033';
-$ShpCustAddrActPntSpCtryCd='S034';
 
-$ShpCustCntCommDev='S035';
-$ShpCustCntCommDevTyCd='S036';
+$ShpCustAddrBsnPtyIndvNm = 'S022';
 
-$ShpCustRgsNo='S056';
+$ShpCustAddrBsnPtyOrgnNm = 'S023';
 
-$ShpMonAmtTyCd='SCUSV';
-$ShpMonAmtAmt='S037';
-$ShpMonAmtAmtCurCd='S037';
+$ShpCustAddrBsnPtyRgsNo = 'S024';
+$ShpCustAddrBsnPtyRgsCtryCd = 'S025';
+$ShpCustAddrBsnPtyRgsTyCd = 'S026';
 
-$ShpChrgTyCd ='TRNPRT';
-$ShpChrgAmt='S038';
-$ShpChrgAmtCurCd='S038';
+$ShpCustAddrFrmtAddrPosCont = 'S027';
+$ShpCustAddrFrmtAddrPosContFmtTyCd = 'LINES';
+$ShpCustAddrFrmtAddrPosContId = '1';
+$ShpCustAddrFrmtAddrPosCont2 = 'S028';
+$ShpCustAddrFrmtAddrPosContFmtTyCd2 = 'LINES';
+$ShpCustAddrFrmtAddrPosContId2 = '2';
+$ShpCustAddrFrmtAddrPosCont3 = 'S029';
+$ShpCustAddrFrmtAddrPosContFmtTyCd3 = 'LINES';
+$ShpCustAddrFrmtAddrPosContId3 = '3';
 
-$ShpSrvGlSrvCd='II';
 
-$ShpSrvChrgAmt='S039';
-$ShpSrvChrgAmtCurCd='S039';
-$ShpDclNpcs='S040';
+$ShpCustAddrActPntSpLtyCtyNm = 'S030';
+$ShpCustAddrActPntSpLtyZip = 'S031';
 
-$ShpShpDocDocTyCd ='S041';
-$ShpShpDocDocId2='S042';
-$ShpShpDocDocTyNm='S043';
-$ShpShpDocDocSubTyCd ='S044';
-$ShpShpDocDocSubTyNm='S045';
-$ShpShpDocDtm ='S046';
+$ShpCustAddrActPntSpLtyCtryDivTyCd = 'S';
+$ShpCustAddrActPntSpLtyCtryDivNm = 'S032';
+$ShpCustAddrActPntSpCtryNm = 'S033';
+$ShpCustAddrActPntSpCtryCd = 'S034';
 
-$ShpShpDocDocTyCd='S047';
-$ShpShpDocDocId='S047';
-$ShpShpDocDtm='S048';
+$ShpCustCntCommDev = 'S035';
+$ShpCustCntCommDevTyCd = 'S036';
 
+$ShpCustRgsNo = 'S056';
 
+$ShpMonAmtTyCd = 'SCUSV';
+$ShpMonAmtAmt = 'S037';
+$ShpMonAmtAmtCurCd = 'S037';
 
-$ShpShpDocCmrcInvMonAmtTyCd='TINVA';
-$ShpShpDocCmrcInvMonAmtAmt='S049';
-$ShpShpDocCmrcInvMonAmtAmtCurCd='S049';
+$ShpChrgTyCd = 'TRNPRT';
+$ShpChrgAmt = 'S038';
+$ShpChrgAmtCurCd = 'S038';
 
-$ShpShpDocDocTyCd2='To be confirmed';
-$ShpShpDocDocId3='S050';
+$ShpSrvGlSrvCd = 'II';
 
-$ShpStStCd='S051';
-$ShpStStCdTyCd='CLR';
-$ShpStStCdDtm='S051';
+$ShpSrvChrgAmt = 'S039';
+$ShpSrvChrgAmtCurCd = 'S039';
+$ShpDclNpcs = 'S040';
 
-$ShpActvDtm='S052';
+$ShpShpDocDocTyCd = 'S041';
+$ShpShpDocDocId2 = 'S042';
+$ShpShpDocDocTyNm = 'S043';
+$ShpShpDocDocSubTyCd = 'S044';
+$ShpShpDocDocSubTyNm = 'S045';
+$ShpShpDocDtm = 'S046';
 
-$ShpPdCntnCd='S053';
+$ShpShpDocDocTyCd = 'S047';
+$ShpShpDocDocId = 'S047';
+$ShpShpDocDtm = 'S048';
 
 
-$ShpShpRefRef='S054';
-$ShpShpRefTyCd='S054';
 
+$ShpShpDocCmrcInvMonAmtTyCd = 'TINVA';
+$ShpShpDocCmrcInvMonAmtAmt = 'S049';
+$ShpShpDocCmrcInvMonAmtAmtCurCd = 'S049';
 
-$LnLnNo='L001';
+$ShpShpDocDocTyCd2 = 'To be confirmed';
+$ShpShpDocDocId3 = 'S050';
 
-$LnSubLnLnNo='L002';
-$LnRef='L003';
-$LnRefTyCd='HWB';
-$LnRef2='L004';
-$LnRefTyCd2='L004';
-$LnQty ='L005';
-$LnQtyUom ='L005';
-$LnDscGds='L006';
-$LnDscGdsLngCd='ENG';
-$LnDscGds2='L007';
-$LnDscGdsLngCd2='L007';
-$LnDngGdsInd='L008';
-$LnGovProcTyCd='L009';
-$LnPartNo='L010';
+$ShpStStCd = 'S051';
+$ShpStStCdTyCd = 'CLR';
+$ShpStStCdDtm = 'S051';
 
-$LnCmdtClssIb='L011';
+$ShpActvDtm = 'S052';
 
-$LnCmdtClssOb='L012';
-$LnHrmnCmdtCd='L013';
-$LnManCtryCd='L014';
-$LnMeas='ART';
-$LnMeasTyCd='L015';
-$LnMeasGrossWgt='L015';
+$ShpPdCntnCd = 'S053';
 
-$LnMeas2='ART';
-$LnMeasTyCd2='L016';
-$LnMeasNetWgt='L016';
 
+$ShpShpRefRef = 'S054';
+$ShpShpRefTyCd = 'S054';
 
-$LnAddQtyUom='L017';
-$LnExpLicCd='L018';
-$LnExpLicNo='L019';
-$LnImpLicCd='L020';
-$LnImpLicNo='L021';
 
-$LnAscDocDocId='L022';
-$LnAscDocDocTyCd='L023';
-$LnAscDocDocTyNm='L024';
-$LnAscDocDocSbTyCd='L025';
-$LnAscDocDocSbTyNm='L026';
-$LnAscDocDtm='L027';
-$LnExchRt='L028';
-$LnExchRtTyCd='L028';
-$LnExchRtBCurCd='L028';
-$LnExchRtOCurCd='L028';
+$LnLnNo = 'L001';
 
-$LnMonAmtTyCd='TCUSV';
-$LnMonAmtAmt='L029';
-$LnMonAmtAmtCurCd='L029';
+$LnSubLnLnNo = 'L002';
+$LnRef = 'L003';
+$LnRefTyCd = 'HWB';
+$LnRef2 = 'L004';
+$LnRefTyCd2 = 'L004';
+$LnQty = 'L005';
+$LnQtyUom = 'L005';
+$LnDscGds = 'L006';
+$LnDscGdsLngCd = 'ENG';
+$LnDscGds2 = 'L007';
+$LnDscGdsLngCd2 = 'L007';
+$LnDngGdsInd = 'L008';
+$LnGovProcTyCd = 'L009';
+$LnPartNo = 'L010';
 
+$LnCmdtClssIb = 'L011';
 
-$LnMonAmtTyCd2='ACUSV';
-$LnMonAmtAmt2='L054';
-$LnMonAmtAmtCurCd2='L054';
+$LnCmdtClssOb = 'L012';
+$LnHrmnCmdtCd = 'L013';
+$LnManCtryCd = 'L014';
+$LnMeas = 'ART';
+$LnMeasTyCd = 'L015';
+$LnMeasGrossWgt = 'L015';
 
-$LnSrvChrgGlSrvCd='L030';
-$LnSrvChrgGlSrvCdGlProdSrvClssCd='L030';
-$LnSrvChrgAmt='L030';
-$LnSrvChrgAmtCurCd='L030';
+$LnMeas2 = 'ART';
+$LnMeasTyCd2 = 'L016';
+$LnMeasNetWgt = 'L016';
 
-$LnCustChrgTyCd2='To be confirmed';
-$LnCustChrgCat='TAX';
-$LnCustChrgRt='L031';
-$LnCustChrgAmt='L031';
-$LnCustChrgAmtCurCd='L031';
 
-$LnCustChrgTyCd='EXC';
-$LnCustChrgCat2='TAX';
-$LnCustChrgRt2='L032';
-$LnCustChrgAmt2='L032';
-$LnCustChrgAmtCurCd2='L032';
+$LnAddQtyUom = 'L017';
+$LnExpLicCd = 'L018';
+$LnExpLicNo = 'L019';
+$LnImpLicCd = 'L020';
+$LnImpLicNo = 'L021';
 
-$LnCustChrgTyCd3='VAT';
-$LnCustChrgCat3='TAX';
-$LnCustChrgRt3='L033';
-$LnCustChrgAmt3='L033';
-$LnCustChrgAmtCurCd3='L033';
+$LnAscDocDocId = 'L022';
+$LnAscDocDocTyCd = 'L023';
+$LnAscDocDocTyNm = 'L024';
+$LnAscDocDocSbTyCd = 'L025';
+$LnAscDocDocSbTyNm = 'L026';
+$LnAscDocDtm = 'L027';
+$LnExchRt = 'L028';
+$LnExchRtTyCd = 'L028';
+$LnExchRtBCurCd = 'L028';
+$LnExchRtOCurCd = 'L028';
 
-$LnCustChrgTyCd4='TAX';
-$LnCustChrgCat4='TAX';
-$LnCustChrgRt4='L034';
-$LnCustChrgAmt4='L034';
-$LnCustChrgAmtCurCd4='L034';
+$LnMonAmtTyCd = 'TCUSV';
+$LnMonAmtAmt = 'L029';
+$LnMonAmtAmtCurCd = 'L029';
 
-$LnCustChrgTyCd5='UOT';
-$LnCustChrgCat5='TAX';
-$LnCustChrgRt5='L035';
-$LnCustChrgAmt5='L035';
-$LnCustChrgAmtCurCd55='L035';
 
-$LnCustChrgTyCd6='POX';
-$LnCustChrgCat6='TAX';
-$LnCustChrgRt6='L036';
-$LnCustChrgAmt6='L036';
-$LnCustChrgAmtCurCd6='L036';
+$LnMonAmtTyCd2 = 'ACUSV';
+$LnMonAmtAmt2 = 'L054';
+$LnMonAmtAmtCurCd2 = 'L054';
 
-$LnCustChrgTyCd7='ADD';
-$LnCustChrgCat7='DUTY';
-$LnCustChrgRt7='L037';
-$LnCustChrgAmt7='L037';
-$LnCustChrgAmtCurCd7='L037';
+$LnSrvChrgGlSrvCd = 'L030';
+$LnSrvChrgGlSrvCdGlProdSrvClssCd = 'L030';
+$LnSrvChrgAmt = 'L030';
+$LnSrvChrgAmtCurCd = 'L030';
 
-$LnCustChrgTyCd8='CVD';
-$LnCustChrgCat8='DUTY';
-$LnCustChrgRt8='L038';
-$LnCustChrgAmt8='L038';
-$LnCustChrgAmtCurCd8='L038';
+$LnCustChrgTyCd2 = 'To be confirmed';
+$LnCustChrgCat = 'TAX';
+$LnCustChrgRt = 'L031';
+$LnCustChrgAmt = 'L031';
+$LnCustChrgAmtCurCd = 'L031';
 
-$LnCustChrgTyCd9='DTY';
-$LnCustChrgCat9='DUTY';
-$LnCustChrgRt9='L039';
-$LnCustChrgAmt9='L039';
-$LnCustChrgAmtCurCd9='L039';
+$LnCustChrgTyCd = 'EXC';
+$LnCustChrgCat2 = 'TAX';
+$LnCustChrgRt2 = 'L032';
+$LnCustChrgAmt2 = 'L032';
+$LnCustChrgAmtCurCd2 = 'L032';
 
-$LnCustChrgTyCd10='ADT';
-$LnCustChrgCat10='DUTY';
-$LnCustChrgRt10='L040';
-$LnCustChrgAmt10='L040';
-$LnCustChrgAmtCurCd10='L040';
+$LnCustChrgTyCd3 = 'VAT';
+$LnCustChrgCat3 = 'TAX';
+$LnCustChrgRt3 = 'L033';
+$LnCustChrgAmt3 = 'L033';
+$LnCustChrgAmtCurCd3 = 'L033';
 
-$LnCustChrgTyCd11='QUA';
-$LnCustChrgCat11='FEE';
-$LnCustChrgRt11='L041';
-$LnCustChrgAmt11='L041';
-$LnCustChrgAmtCurCd11='L041';
+$LnCustChrgTyCd4 = 'TAX';
+$LnCustChrgCat4 = 'TAX';
+$LnCustChrgRt4 = 'L034';
+$LnCustChrgAmt4 = 'L034';
+$LnCustChrgAmtCurCd4 = 'L034';
 
-$LnCustChrgTyCd12='MPF';
-$LnCustChrgCat12='FEE';
-$LnCustChrgRt12='L042';
-$LnCustChrgAmt12='L042';
-$LnCustChrgAmtCurCd12='L042';
+$LnCustChrgTyCd5 = 'UOT';
+$LnCustChrgCat5 = 'TAX';
+$LnCustChrgRt5 = 'L035';
+$LnCustChrgAmt5 = 'L035';
+$LnCustChrgAmtCurCd55 = 'L035';
 
-$LnCustChrgTyCd13='PEN';
-$LnCustChrgCat13='FEE';
-$LnCustChrgRt13='L043';
-$LnCustChrgAmt13='L043';
-$LnCustChrgAmtCurCd13='L043';
+$LnCustChrgTyCd6 = 'POX';
+$LnCustChrgCat6 = 'TAX';
+$LnCustChrgRt6 = 'L036';
+$LnCustChrgAmt6 = 'L036';
+$LnCustChrgAmtCurCd6 = 'L036';
 
-$LnCustChrgTyCd14='TZP';
-$LnCustChrgCat14='FEE';
-$LnCustChrgRt14='L044';
-$LnCustChrgAmt14='L044';
-$LnCustChrgAmtCurCd14='L044';
+$LnCustChrgTyCd7 = 'ADD';
+$LnCustChrgCat7 = 'DUTY';
+$LnCustChrgRt7 = 'L037';
+$LnCustChrgAmt7 = 'L037';
+$LnCustChrgAmtCurCd7 = 'L037';
 
-$LnCustChrgTyCd15='REG';
-$LnCustChrgCat15='FEE';
-$LnCustChrgRt15='L045';
-$LnCustChrgAmt15='L045';
-$LnCustChrgAmtCurCd15='L045';
+$LnCustChrgTyCd8 = 'CVD';
+$LnCustChrgCat8 = 'DUTY';
+$LnCustChrgRt8 = 'L038';
+$LnCustChrgAmt8 = 'L038';
+$LnCustChrgAmtCurCd8 = 'L038';
 
-$LnCustChrgTyCd16='DTF';
-$LnCustChrgCat16='FEE';
-$LnCustChrgRt16='L046';
-$LnCustChrgAmt16='L046';
-$LnCustChrgAmtCurCd16='L046';
+$LnCustChrgTyCd9 = 'DTY';
+$LnCustChrgCat9 = 'DUTY';
+$LnCustChrgRt9 = 'L039';
+$LnCustChrgAmt9 = 'L039';
+$LnCustChrgAmtCurCd9 = 'L039';
 
-$LnPrefTreatmentInd='L047';
-$LnPrefTreatmentTyCd='L048';
-$LnPrefTreatmentNm='L049';
+$LnCustChrgTyCd10 = 'ADT';
+$LnCustChrgCat10 = 'DUTY';
+$LnCustChrgRt10 = 'L040';
+$LnCustChrgAmt10 = 'L040';
+$LnCustChrgAmtCurCd10 = 'L040';
 
-$LnMonAmtTyCd3='TDCBV';
-$LnMonAmtAmt3='L050';
-$LnMonAmtAmtCurCd3='L050';
+$LnCustChrgTyCd11 = 'QUA';
+$LnCustChrgCat11 = 'FEE';
+$LnCustChrgRt11 = 'L041';
+$LnCustChrgAmt11 = 'L041';
+$LnCustChrgAmtCurCd11 = 'L041';
 
-$LnMonAmtTyCd4='TCSCH';
-$LnMonAmtAmt4='L051';
-$LnMonAmtAmtCurCd4='L051';
+$LnCustChrgTyCd12 = 'MPF';
+$LnCustChrgCat12 = 'FEE';
+$LnCustChrgRt12 = 'L042';
+$LnCustChrgAmt12 = 'L042';
+$LnCustChrgAmtCurCd12 = 'L042';
 
-$LnMonAmtTyCd5='TLHCH';
-$LnMonAmtAmt5='L052';
-$LnMonAmtAmtCurCd5='L052';
+$LnCustChrgTyCd13 = 'PEN';
+$LnCustChrgCat13 = 'FEE';
+$LnCustChrgRt13 = 'L043';
+$LnCustChrgAmt13 = 'L043';
+$LnCustChrgAmtCurCd13 = 'L043';
 
-$LnMonAmtTyCd6='TOTAX';
-$LnMonAmtAmt6='L053';
-$LnMonAmtAmtCurCd6='L053';
+$LnCustChrgTyCd14 = 'TZP';
+$LnCustChrgCat14 = 'FEE';
+$LnCustChrgRt14 = 'L044';
+$LnCustChrgAmt14 = 'L044';
+$LnCustChrgAmtCurCd14 = 'L044';
 
-$LnPrevGovProcTyCd='L055';
+$LnCustChrgTyCd15 = 'REG';
+$LnCustChrgCat15 = 'FEE';
+$LnCustChrgRt15 = 'L045';
+$LnCustChrgAmt15 = 'L045';
+$LnCustChrgAmtCurCd15 = 'L045';
+
+$LnCustChrgTyCd16 = 'DTF';
+$LnCustChrgCat16 = 'FEE';
+$LnCustChrgRt16 = 'L046';
+$LnCustChrgAmt16 = 'L046';
+$LnCustChrgAmtCurCd16 = 'L046';
+
+$LnPrefTreatmentInd = 'L047';
+$LnPrefTreatmentTyCd = 'L048';
+$LnPrefTreatmentNm = 'L049';
+
+$LnMonAmtTyCd3 = 'TDCBV';
+$LnMonAmtAmt3 = 'L050';
+$LnMonAmtAmtCurCd3 = 'L050';
+
+$LnMonAmtTyCd4 = 'TCSCH';
+$LnMonAmtAmt4 = 'L051';
+$LnMonAmtAmtCurCd4 = 'L051';
+
+$LnMonAmtTyCd5 = 'TLHCH';
+$LnMonAmtAmt5 = 'L052';
+$LnMonAmtAmtCurCd5 = 'L052';
+
+$LnMonAmtTyCd6 = 'TOTAX';
+$LnMonAmtAmt6 = 'L053';
+$LnMonAmtAmtCurCd6 = 'L053';
+
+$LnPrevGovProcTyCd = 'L055';
 
 //arrays
-	$Hdr=['@Id'=> 'D052',
-		  '@Ver'=> 'D051'];
-		  
-		  
-	$GenReq=['GenrcRqCritr'=> [
-				'@TyCd'=> $GenrcRqCritrTyCd,
-				'Val'=> $GenrcRqCritrVal
-				]
-			];
+$Hdr = [
+	'@Id' => 'D052',
+	'@Ver' => 'D051'
+];
 
-	$St=[
-		'StCd'=> ["$"=>$StStCd1,'@TyCd'=> $StStCdTyCd1,'Dtm'=> $StStCdDtm1],
-	//	'StCd'=> ["$"=>$StStCd2,'@TyCd'=> $StStCdTyCd2,'Dtm'=> $StStCdDtm2],
-	//	'StCd'=> ["$"=>$StStCd3,'@TyCd'=> $StStCdTyCd3,'Dtm'=> $StStCdDtm3],
-		];
-			
-	$RegDec=[ 'DocId'=>$DocId,
-			  'RegDecNo'=>$RegDecNo,
-			  'TyCd'=>$TyCd,
-			  'Fnc'=>$Fnc,
-			  'ExpDt'=>$ExpDt,
-			  'St'=>$St			  
-		
-		//to be continued
-		
-	
-		];
+$GenReq = [
+	[
+		'GenrcRqCritr' => [
+			[
+				'@TyCd' => $GenrcRqCritrTyCd,
+				'Val' => [$GenrcRqCritrVal]
+			]
+		]
+	]
+];
 
-	$Bd=[ 'GenReq'=>$GenReq,
-		  'RegDec'=>$RegDec
-		];
-	 
-	
-    $root = [];
+$St = [
+	[
+		"StCd" => [
+			["$" => $StStCd1, '@TyCd' => $StStCdTyCd1, '@Dtm' => $StStCdDtm1],
+			["$" => $StStCd2, '@TyCd' => $StStCdTyCd2, '@Dtm' => $StStCdDtm2],
+			["$" => $StStCd3, '@TyCd' => $StStCdTyCd3, '@Dtm' => $StStCdDtm3]
+		]
+	]
+];
 
-    $root['RegDecMsg'] = [
-        'Hdr'   => $Hdr,
-        'Bd' => $Bd
-        ];
+$DatElGrp = [
+	[
+		'@Cd' => $DatElGrpCd,
+		'DatEl' => [
+			['Cd' => $DatElGrpDatElCd1, 'Val' => $DatElGrpDatElVal1],
+			['Cd' => $DatElGrpDatElCd2, 'Val' => $DatElGrpDatElVal2],
+		]
+	]
+];
+
+$Meas = [
+	[
+		'@TyCd' => $MeasTyCd,
+		'NetWgt' => ['@Uom' => $MeasNetWgtUom],
+		'GrossWgt' => ['@Uom' => $MeasGrossWgtUom]
+	]
+];
+
+$AscDoc = [
+	[
+		'DocTyCd' => $AscDocDocTyCd,
+		'DocId' => $AscDocDocId,
+	]
+];
+
+$BsnPty = [
+	[
+		'RolTyCd' => $BsnPtyRolTyCd,
+		'BsnpTyCd' => $BsnPtyBsnpTyCd,
+	]
+];
+
+$MonAmt = [
+	[	
+		'@TyCd' => $MonAmtTyCd,
+		'Amt' => [
+			['$' => $MonAmtAmt],
+			['@CurCd' => $MonAmtAmtCurCd]
+		]
+	],
+	[
+		'@TyCd' => $MonAmtTyCd2,
+		'Amt' => [
+			['$' => $MonAmtAmt2],
+			['@CurCd' => $MonAmtAmtCurCd2]
+		]
+	],
+	[
+		'@TyCd' => $MonAmtTyCd3,
+		'Amt' => [
+			['$' => $MonAmtAmt3],
+			['@CurCd' => $MonAmtAmtCurCd3]
+		]
+	],
+	[
+		'@TyCd' => $MonAmtTyCd4,
+		'Amt' => [
+			['$' => $MonAmtAmt4],
+			['@CurCd' => $MonAmtAmtCurCd4]
+		]
+	]
+
+];
+
+$RegDec = [
+	'DocId' => $DocId,
+	'RegDecNo' => $RegDecNo,
+	'TyCd' => $TyCd,
+	'Fnc' => $Fnc,
+	'ExpDt' => $ExpDt,
+	'St' => $St,
+	'AcpDt' => $AcpDt,
+	'DatElGrp' => $DatElGrp,
+	'Meas' => $Meas,
+	'TotNoOfArtcl' => $TotNoOfArtcl,
+	'AscDoc' => $AscDoc,
+	'GovProcTyCd' => $GovProcTyCd,
+	'BsnPty' => $BsnPty,
+	'CurCd' => $CurCd,
+	'MonAmt' => $MonAmt,
+	'CustChrg' => $CustChrg
+
+	//to be continued
+];
+
+$Bd = [
+	'GenReq' => $GenReq,
+	'RegDec' => $RegDec
+];
 
 
-	echo "<textarea>".json_encode($root, JSON_PRETTY_PRINT)."</textarea>";
-    $fp = fopen('json/results.json', 'w');
-    fwrite($fp, json_encode($root, JSON_PRETTY_PRINT));
-    fclose($fp);
+$root = [];
+
+$root['RegDecMsg'] = [
+	'Hdr' => $Hdr,
+	'Bd' => $Bd,
+];
+
+
+echo "<textarea>" . json_encode($root, JSON_PRETTY_PRINT) . "</textarea>";
+
+$fp = fopen('./json/results.json', 'w');
+fwrite($fp, json_encode($root, JSON_PRETTY_PRINT));
+fclose($fp);
 
 echo "file created";
-?>
