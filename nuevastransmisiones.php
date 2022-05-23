@@ -628,37 +628,186 @@ $BsnPty = [
 	]
 ];
 
+// Create MonAmt array with initial MonAmt object
 $MonAmt = [
-	[	
+	[
 		'@TyCd' => $MonAmtTyCd,
 		'Amt' => [
 			['$' => $MonAmtAmt],
 			['@CurCd' => $MonAmtAmtCurCd]
 		]
-	],
-	[
-		'@TyCd' => $MonAmtTyCd2,
+	]
+];
+// Dynamically collect all $MonAmt* variables, create objects & add to $MonAmt array
+for ($i = 2; $i < 5; $i++) {
+	$MonAmtObj = [
+		'@TyCd' => ${'MonAmtTyCd' . $i},
 		'Amt' => [
-			['$' => $MonAmtAmt2],
-			['@CurCd' => $MonAmtAmtCurCd2]
+			['$' => ${'MonAmtAmt' . $i}],
+			['@CurCd' => ${'MonAmtAmtCurCd' . $i}]
 		]
-	],
+	];
+
+	array_push($MonAmt, $MonAmtObj);
+}
+
+// Create CustChrg array with initial CustChrg object
+$CustChrg = [
 	[
-		'@TyCd' => $MonAmtTyCd3,
+		'TyCd' => $CustChrgTyCd,
+		'Cat' => $CustChrgCat,
 		'Amt' => [
-			['$' => $MonAmtAmt3],
-			['@CurCd' => $MonAmtAmtCurCd3]
+			'$' => $CustChrgAmt,
+			'@CurCd' =>  $CustChrgAmtCurCd
 		]
-	],
+	]
+];
+// Dynamically collect all $CustChrg* variables, create objects & add to $CustChrg array
+for ($i = 2; $i < 18; $i++) {
+	$CustChrgObj = [
+		'TyCd' => ${'CustChrgTyCd' . $i},
+		'Cat' => ${'CustChrgCat' . $i},
+		'Amt' => [
+			'$' => ${'CustChrgAmt' . $i},
+			'@CurCd' =>  ${'CustChrgAmtCurCd' . $i},
+		]
+	];
+
+	array_push($CustChrg, $CustChrgObj);
+}
+
+$GI = [
+	'@SrcDtm' => $GISrcDtm,
+	'@SrcAppNm' => $GISrcAppNm,
+	'@SrcCtryCd' => $GISrcCtryCd,
+	'@SrcFcId' => $GISrcFcId,
+	'@CorrId' => $GICorrId
+];
+
+$PrefTreatment = [
+	'Ind' => $PrefTreatmentInd,
+	'TyCd' => $PrefTreatmentTyCd,
+	'Nm' => $PrefTreatmentNm
+];
+
+$ExchRt_json = [
 	[
-		'@TyCd' => $MonAmtTyCd4,
-		'Amt' => [
-			['$' => $MonAmtAmt4],
-			['@CurCd' => $MonAmtAmtCurCd4]
+		'$' => $ExchRt,
+		'@TyCd' => $ExchRtTyCd,
+		'@BCurCd' => $ExchRtBCurCd,
+		'@OCurCd' => $ExchRtOCurCd
+
+	]
+];
+
+$Cust = [ // array
+	[
+		'Addr' => [ // obj
+			'FrmtAddr' => [ // array
+				['PosCont' => [ // obj
+					'$' => $CustAddrFrmtAddrPosCont,
+					'@FmtTyCd' => $CustAddrFrmtAddrPosContFmtTyCd,
+					'@Id' => $CustAddrFrmtAddrPosContId
+				]]
+			]
 		]
+	]
+];
+
+$RespStatus = [ // array
+	[ // obj
+		'Sev' => $RespStatusSev,
+		'MsgClg' => $RespStatusMsgClg,
+		'MsgCIgd' => $RespStatusMsgCIgd,
+		'Dsc' => $RespStatusDsc,
+		'GI' => [ // obj
+			'@SrcDtm' => $RespStatusGISrcDtm
+		]
+	]
+];
+
+// Mvmt Composites
+$MvmtKey = [ // obj
+	'@MvmtNo' => $MvmtMvmtKeyMvmtNo,
+	'@MvmtDt' => $MvmtMvmtKeyMvmtDt
+];
+
+$Crr = [ // obj
+	'Nm' => $MvmtCrrNm,
+	'BsnPtyCd' => $MvmtCrrBsnPtyCd
+];
+
+$Veh = [ // obj
+	'VehId' => $MvmtVehVehId,
+	'MdOfTrns' => [
+		'$' => $MvmtVehMdOfTrns
+	],
+	'FleetTy' => [
+		'$' => $MvmtVehFleetTy
+	],
+	'VehRgsN' => $MvmtVehVehRgsN,
+	'RgsCtryCd' => $MvmtVehRgsCtryCd
+];
+
+$MvmtDatElGrp = [ // arr
+	[ // obj
+		'@Cd' => $DatElGrpCd,
+		'DatEl' => [ // array
+			[ // obj
+				'Cd' => $DatElGrpDatElCd1,
+				'Val' => [ // obj
+					'$' => $DatElGrpDatElVal1
+				]
+			],
+			[ // obj
+				'Cd' => $DatElGrpDatElCd2,
+				'Val' => [ // obj
+					'$' => $DatElGrpDatElVal2
+				]
+			]
+		]
+	]
+];
+
+$Doc = [ // arr
+	[
+		'TyCd' => $MvmtDocTyCd,
+		'id' => $MvmtDocId,
+		'PcsInDoc' => [ // array
+			[ // obj
+				'PcsId' => $MvmtDocPcsInDocPcsId,
+				'ShpId' => $MvmtDocPcsInDocShpId
+			],
+		],
+		'ShpInDoc' => [ // arr
+			'ShpKey' => [ // obj
+				'$' => $MvmtDocShpInDocShpkey 
+			]
+		]
+
 	]
 
 ];
+
+$Mvmt = [ // array
+	[
+		'MvmtKey' => $MvmtKey,
+		'Crr' => $Crr,
+		'Veh' => $Veh,
+		'DptDtm' => $MvmtDptDtm,
+		'ArrDtm' => $MvmtArrDtm,
+		'DatElGrp' => $MvmtDatElGrp,
+		'OrgSrvaCd' => $MvmtOrgSrvaCd,
+		'OrgIATACd' => $MvmtDstIATACd,
+		'DstSrvaCd' => $MvmtDstSrvaCd,
+		'DstIATACd' => $MvmtDstIATACd,
+		'Doc' => $Doc
+
+
+	]
+];
+
+
 
 $RegDec = [
 	'DocId' => $DocId,
@@ -676,16 +825,22 @@ $RegDec = [
 	'BsnPty' => $BsnPty,
 	'CurCd' => $CurCd,
 	'MonAmt' => $MonAmt,
-	'CustChrg' => $CustChrg
-
-	//to be continued
+	'CustChrg' => $CustChrg,
+	'GI' => $GI,
+	'PrefTreatment' => $PrefTreatment, // *Not found in schema
+	'ExchRt' => $ExchRt_json,
+	'ReglBdCd' => $ReglBdCd,
+	'Cust' => $Cust,
+	'DngGdsInd' => $DngGdsInd,
+	'Customs Form Description' => $CustomsFormDescription, // *Not found in schema
+	'RespStatus' => $RespStatus,
+	'Mvmt' => $Mvmt
 ];
 
 $Bd = [
 	'GenReq' => $GenReq,
 	'RegDec' => $RegDec
 ];
-
 
 $root = [];
 

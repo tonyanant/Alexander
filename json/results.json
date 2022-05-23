@@ -131,6 +131,258 @@
                             }
                         ]
                     }
+                ],
+                "CustChrg": [
+                    {
+                        "TyCd": "To be confirmed",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D023",
+                            "@CurCd": "D023"
+                        }
+                    },
+                    {
+                        "TyCd": "EXC",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D024",
+                            "@CurCd": "D024"
+                        }
+                    },
+                    {
+                        "TyCd": "VAT",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D025",
+                            "@CurCd": "D025"
+                        }
+                    },
+                    {
+                        "TyCd": "TAX",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D026",
+                            "@CurCd": "D026"
+                        }
+                    },
+                    {
+                        "TyCd": "UOT",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D027",
+                            "@CurCd": "D027"
+                        }
+                    },
+                    {
+                        "TyCd": "POX",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D028",
+                            "@CurCd": "D028"
+                        }
+                    },
+                    {
+                        "TyCd": "ADD",
+                        "Cat": "DUTY",
+                        "Amt": {
+                            "$": "D029",
+                            "@CurCd": "D029"
+                        }
+                    },
+                    {
+                        "TyCd": "CVD",
+                        "Cat": "DUTY",
+                        "Amt": {
+                            "$": "D030",
+                            "@CurCd": "D030"
+                        }
+                    },
+                    {
+                        "TyCd": "DTY",
+                        "Cat": "DUTY",
+                        "Amt": {
+                            "$": "D031",
+                            "@CurCd": "D031"
+                        }
+                    },
+                    {
+                        "TyCd": "ADT",
+                        "Cat": "DUTY",
+                        "Amt": {
+                            "$": "D032",
+                            "@CurCd": "D032"
+                        }
+                    },
+                    {
+                        "TyCd": "QUA",
+                        "Cat": "FEE",
+                        "Amt": {
+                            "$": "D033",
+                            "@CurCd": "D033"
+                        }
+                    },
+                    {
+                        "TyCd": "MPF",
+                        "Cat": "FEE",
+                        "Amt": {
+                            "$": "D034",
+                            "@CurCd": "D034"
+                        }
+                    },
+                    {
+                        "TyCd": "PEN",
+                        "Cat": "FEE",
+                        "Amt": {
+                            "$": "D035",
+                            "@CurCd": "D035"
+                        }
+                    },
+                    {
+                        "TyCd": "TZP",
+                        "Cat": "FEE",
+                        "Amt": {
+                            "$": "D036",
+                            "@CurCd": "D036"
+                        }
+                    },
+                    {
+                        "TyCd": "REG",
+                        "Cat": "FEE",
+                        "Amt": {
+                            "$": "D037",
+                            "@CurCd": "D037"
+                        }
+                    },
+                    {
+                        "TyCd": "DTF",
+                        "Cat": "FEE",
+                        "Amt": {
+                            "$": "D038",
+                            "@CurCd": "D038"
+                        }
+                    },
+                    {
+                        "TyCd": "To be confirmed",
+                        "Cat": "TAX",
+                        "Amt": {
+                            "$": "D046",
+                            "@CurCd": "D046"
+                        }
+                    }
+                ],
+                "GI": {
+                    "@SrcDtm": "D039",
+                    "@SrcAppNm": "D040",
+                    "@SrcCtryCd": "D041",
+                    "@SrcFcId": "D042",
+                    "@CorrId": "D049"
+                },
+                "PrefTreatment": {
+                    "Ind": "D043",
+                    "TyCd": "D044",
+                    "Nm": "D045"
+                },
+                "ExchRt": [
+                    {
+                        "$": "D048",
+                        "@TyCd": "D048",
+                        "@BCurCd": "D048",
+                        "@OCurCd": "D048"
+                    }
+                ],
+                "ReglBdCd": "D056",
+                "Cust": [
+                    {
+                        "Addr": {
+                            "FrmtAddr": [
+                                {
+                                    "PosCont": {
+                                        "$": "D057",
+                                        "@FmtTyCd": "LINES",
+                                        "@Id": "1"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                ],
+                "DngGdsInd": "D058",
+                "Customs Form Description": "D060",
+                "RespStatus": [
+                    {
+                        "Sev": "10",
+                        "MsgClg": "DR01",
+                        "MsgCIgd": "DR01",
+                        "Dsc": "DR02",
+                        "GI": {
+                            "@SrcDtm": "DR03"
+                        }
+                    }
+                ],
+                "Mvmt": [
+                    {
+                        "MvmtKey": {
+                            "@MvmtNo": "M001",
+                            "@MvmtDt": "M001"
+                        },
+                        "Crr": {
+                            "Nm": "M002",
+                            "BsnPtyCd": "M003"
+                        },
+                        "Veh": {
+                            "VehId": "M004",
+                            "MdOfTrns": {
+                                "$": "M005"
+                            },
+                            "FleetTy": {
+                                "$": "M006"
+                            },
+                            "VehRgsN": "M007",
+                            "RgsCtryCd": "M008"
+                        },
+                        "DptDtm": "M009",
+                        "ArrDtm": "M010",
+                        "DatElGrp": [
+                            {
+                                "@Cd": "DuePayDt",
+                                "DatEl": [
+                                    {
+                                        "Cd": "PayDt",
+                                        "Val": {
+                                            "$": "D011"
+                                        }
+                                    },
+                                    {
+                                        "Cd": "PayTyCd",
+                                        "Val": {
+                                            "$": "D012"
+                                        }
+                                    }
+                                ]
+                            }
+                        ],
+                        "OrgSrvaCd": "M012",
+                        "OrgIATACd": "M015",
+                        "DstSrvaCd": "M014",
+                        "DstIATACd": "M015",
+                        "Doc": [
+                            {
+                                "TyCd": "MWB",
+                                "id": "M016",
+                                "PcsInDoc": [
+                                    {
+                                        "PcsId": "M017",
+                                        "ShpId": "M021"
+                                    }
+                                ],
+                                "ShpInDoc": {
+                                    "ShpKey": {
+                                        "$": "HWB"
+                                    }
+                                }
+                            }
+                        ]
+                    }
                 ]
             }
         }
