@@ -781,9 +781,75 @@ $Doc = [ // arr
 		],
 		'ShpInDoc' => [ // arr
 			'ShpKey' => [ // obj
-				'$' => $MvmtDocShpInDocShpkey 
+				'$' => $MvmtDocShpInDocShpkey
 			]
+		],
+		'HuInDoc' => [ // arr
+			['HUId' => $MvmtDocHuInDocHuId]
+		],
+		'DatElGrp' => [ // arr
+			[ // obj 1
+				'@Cd' => $MvmtDocDatElGrpCd,
+				'DatEl' => [ // arr
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal
+						]
+					]
+				]
+			],
+			[ // obj 2
+				'@Cd' => $MvmtDocDatElGrpCd1,
+				'DatEl' => [ // arr
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd2,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal2
+						]
+					],
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd3,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal3
+						]
+					],
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd4,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal4
+						]
+					]
+
+				]
+			],
+			[ // obj 3
+				'@Cd' => $MvmtDocDatElGrpCd3,
+				'DatEl' => [ // arr
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd5,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal5
+						]
+					],
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd6,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal6
+						]
+					],
+					[ // obj
+						'Cd' => $MvmtDocDatElGrpDatElCd7,
+						'Val' => [ // obj
+							'$' => $MvmtDocDatElGrpDatElVal7
+						]
+					]
+
+				]
+			]
+
 		]
+
 
 	]
 
@@ -801,7 +867,67 @@ $Mvmt = [ // array
 		'OrgIATACd' => $MvmtDstIATACd,
 		'DstSrvaCd' => $MvmtDstSrvaCd,
 		'DstIATACd' => $MvmtDstIATACd,
-		'Doc' => $Doc
+		'Doc' => $Doc,
+		'ProcTy' => $MvmtProcTy,
+		'MvmtKey' => [
+			['@MvmtNo' => $MvmtMvmtKeyMvmtNo],
+			['@MvmtNo' => $MvmtMvmtKeyMvmtNo2],
+			['@MvmtNo' => $MvmtMvmtKeyMvmtNo3],
+			['@MvmtNo' => $MvmtMvmtKeyMvmtNo4]
+		]
+	]
+
+];
+
+// Shp composites
+$ShpCustComponent = [ // arr
+	[ // 'Cust 'obj
+		'CustId' => $ShpCustCustId,
+		'NtwAccNo' => $ShpCustNtwAccNo,
+		'CustRmk' => $ShpCustCustRmk,
+		'CustRolTyCd' => [ // arr
+			$ShpCustCustRolTyCd
+		]
+
+		// To be continued .. 
+		 
+	]
+];
+
+$Shp = [ // array
+	[ // obj
+		'ShpKey' => ['$' => $ShpShpKey], // obj
+		'OrgSrvACd' => $ShpOrgSrvACd, // str
+		'DstSrvACd' => $ShpDstSrvACd, // str
+		'ActNPcs' => $ShpActNPcs, // num
+		'Meas' => [ // arr
+			[
+				'@TyCd' => $ShpMeasTyCd, // str
+				'Wgt' => [ // obj
+					'@Uom' => $ShpMeasWgtUOM
+				]
+			],
+			[
+				'@TyCd' => $ShpMeasTyCd2, // str 
+				'NetWgt' => [
+					'@Uom' => $ShpMeasNetWgtUOM
+				]
+			]
+
+		],
+		'IncTrmCd' => $ShpIncTrmCd,
+		'PwkInd' => $ShpPwkInd,
+		'RelCoInd' => $ShpRelCoInd,
+		'RtdExTrInd' => $ShpRtdExTrInd,
+		'Dsc' => [ // arr
+			['$' => $ShpDsc]
+		],
+		'LngCd' => $ShpLngCd,
+		'EntrCstOfcCd' => $ShpEntrCstOfcCd,
+		'ExitCstOfcCd' => $ShpExitCstOfcCd,
+		'PlcOfLoadCd' => $ShpPlcOfLoadCd,
+		'PlcOfDischCd' => $ShpPlcOfDischCd,
+		'Cust' => $ShpCustComponent
 
 
 	]
@@ -834,7 +960,8 @@ $RegDec = [
 	'DngGdsInd' => $DngGdsInd,
 	'Customs Form Description' => $CustomsFormDescription, // *Not found in schema
 	'RespStatus' => $RespStatus,
-	'Mvmt' => $Mvmt
+	'Mvmt' => $Mvmt,
+	'Shp' => $Shp
 ];
 
 $Bd = [

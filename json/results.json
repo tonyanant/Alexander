@@ -321,10 +321,20 @@
                 ],
                 "Mvmt": [
                     {
-                        "MvmtKey": {
-                            "@MvmtNo": "M001",
-                            "@MvmtDt": "M001"
-                        },
+                        "MvmtKey": [
+                            {
+                                "@MvmtNo": "M001"
+                            },
+                            {
+                                "@MvmtNo": "M024"
+                            },
+                            {
+                                "@MvmtNo": "M025"
+                            },
+                            {
+                                "@MvmtNo": "M027"
+                            }
+                        ],
                         "Crr": {
                             "Nm": "M002",
                             "BsnPtyCd": "M003"
@@ -379,7 +389,120 @@
                                     "ShpKey": {
                                         "$": "HWB"
                                     }
+                                },
+                                "HuInDoc": [
+                                    {
+                                        "HUId": "M023"
+                                    }
+                                ],
+                                "DatElGrp": [
+                                    {
+                                        "@Cd": "CommonGrp",
+                                        "DatEl": [
+                                            {
+                                                "Cd": "NPcs",
+                                                "Val": {
+                                                    "$": "M018"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@Cd": "Meas",
+                                        "DatEl": [
+                                            {
+                                                "Cd": "TyCd",
+                                                "Val": {
+                                                    "$": "ACT"
+                                                }
+                                            },
+                                            {
+                                                "Cd": "WgtUom",
+                                                "Val": {
+                                                    "$": "M019"
+                                                }
+                                            },
+                                            {
+                                                "Cd": "NetWgt",
+                                                "Val": {
+                                                    "$": "M019"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "@Cd": "Meas",
+                                        "DatEl": [
+                                            {
+                                                "Cd": "TyCd",
+                                                "Val": {
+                                                    "$": "DEC"
+                                                }
+                                            },
+                                            {
+                                                "Cd": "WgtUom",
+                                                "Val": {
+                                                    "$": "M020"
+                                                }
+                                            },
+                                            {
+                                                "Cd": "GrossWgt",
+                                                "Val": {
+                                                    "$": "M020"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "ProcTy": "At arrival"
+                    }
+                ],
+                "Shp": [
+                    {
+                        "ShpKey": {
+                            "$": "S001"
+                        },
+                        "OrgSrvACd": "S002",
+                        "DstSrvACd": "S003",
+                        "ActNPcs": "S004",
+                        "Meas": [
+                            {
+                                "@TyCd": "DEC",
+                                "Wgt": {
+                                    "@Uom": "S005"
                                 }
+                            },
+                            {
+                                "@TyCd": "ACT",
+                                "NetWgt": {
+                                    "@Uom": "S006"
+                                }
+                            }
+                        ],
+                        "IncTrmCd": "S007",
+                        "PwkInd": "S008",
+                        "RelCoInd": "S009",
+                        "RtdExTrInd": "S010",
+                        "Dsc": [
+                            {
+                                "$": "S011"
+                            }
+                        ],
+                        "LngCd": "S012",
+                        "EntrCstOfcCd": "S013",
+                        "ExitCstOfcCd": "S014",
+                        "PlcOfLoadCd": "S015",
+                        "PlcOfDischCd": "S016",
+                        "Cust": [
+                            {
+                                "CustId": "S017",
+                                "NtwAccNo": "S018",
+                                "CustRmk": "S019",
+                                "CustRolTyCd": [
+                                    "S020"
+                                ]
                             }
                         ]
                     }
