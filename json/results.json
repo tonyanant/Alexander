@@ -502,7 +502,187 @@
                                 "CustRmk": "S019",
                                 "CustRolTyCd": [
                                     "S020"
+                                ],
+                                "Addr": {
+                                    "GI": {
+                                        "LngCd": {
+                                            "$": "S055"
+                                        }
+                                    },
+                                    "BsnPty": {
+                                        "Indv": {
+                                            "Nm": "S022"
+                                        },
+                                        "Orgn": {
+                                            "Nm": "S023"
+                                        },
+                                        "Rgs": [
+                                            {
+                                                "No": "S024",
+                                                "CtryCd": "S025",
+                                                "TyCd": "S026"
+                                            }
+                                        ]
+                                    },
+                                    "FrmtAddr": [
+                                        {
+                                            "PosCont": [
+                                                {
+                                                    "$": "S027",
+                                                    "FmtTyCd": "LINES",
+                                                    "id": "1"
+                                                },
+                                                {
+                                                    "$": "S028",
+                                                    "FmtTyCd": "LINES",
+                                                    "id": "2"
+                                                },
+                                                {
+                                                    "$": "S029",
+                                                    "FmtTyCd": "LINES",
+                                                    "id": "3"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "ActPntSp": {
+                                        "Lty": {
+                                            "CtyNm": "S030",
+                                            "Zip": "S031",
+                                            "CtryDiv": [
+                                                {
+                                                    "TyCd": "S",
+                                                    "Nm ": "S032"
+                                                }
+                                            ]
+                                        },
+                                        "CtryNm": "S033",
+                                        "CtryCd": "S034"
+                                    }
+                                },
+                                "Cnt": [
+                                    {
+                                        "CommDev": [
+                                            {
+                                                "$": "S035",
+                                                "@TyCd": "S036"
+                                            }
+                                        ]
+                                    }
+                                ],
+                                "Rgs": [
+                                    {
+                                        "No": "S056"
+                                    }
                                 ]
+                            }
+                        ],
+                        "MonAmt": [
+                            {
+                                "@TyCd": "SCUSV",
+                                "Amt": [
+                                    {
+                                        "$": "S037"
+                                    },
+                                    {
+                                        "@CurCd": "S037"
+                                    }
+                                ]
+                            }
+                        ],
+                        "Chrg": [
+                            {
+                                "@TyCd": "TRNPRT",
+                                "Amt": [
+                                    {
+                                        "$": "S038"
+                                    },
+                                    {
+                                        "@CurCd": "S038"
+                                    }
+                                ]
+                            }
+                        ],
+                        "Srv": [
+                            {
+                                "GlSrvCd": {
+                                    "$": "II"
+                                },
+                                "Chrg": [
+                                    {
+                                        "Amt": [
+                                            {
+                                                "$": "S039",
+                                                "CurCd": "S039"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            }
+                        ],
+                        "DclNpcs": "S040",
+                        "ShpDoc": [
+                            {
+                                "DocTyCd": "S047",
+                                "DocId": "S042",
+                                "DocTyNm": [
+                                    {
+                                        "$": "S043"
+                                    }
+                                ],
+                                "DocSubTyCd": "S044",
+                                "DocSubTyNm": [
+                                    {
+                                        "$": "S045"
+                                    }
+                                ],
+                                "Dtm": {
+                                    "$": "S048"
+                                }
+                            },
+                            {
+                                "DocTyCd": "S047",
+                                "DocId": "S047",
+                                "Dtm": {
+                                    "$": "S048"
+                                }
+                            },
+                            {
+                                "CmrcInv": {
+                                    "MonAmt": [
+                                        {
+                                            "TyCd": "TINVA",
+                                            "Amt": [
+                                                {
+                                                    "$": "S049",
+                                                    "CurCd": "S049"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            },
+                            {
+                                "DocTyCd": "To be confirmed",
+                                "DocId": "S050"
+                            }
+                        ],
+                        "St": [
+                            {
+                                "StCd": {
+                                    "TyCd": "CLR",
+                                    "Dtm": "S051"
+                                }
+                            }
+                        ],
+                        "ActvDtm": {
+                            "$": "S052"
+                        },
+                        "PdCntnCd": "S053",
+                        "ShpRef": [
+                            {
+                                "Ref": "S054",
+                                "TyCd": "S054"
                             }
                         ]
                     }

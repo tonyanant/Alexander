@@ -363,9 +363,9 @@ $ShpShpDocDocSubTyCd = 'S044';
 $ShpShpDocDocSubTyNm = 'S045';
 $ShpShpDocDtm = 'S046';
 
-$ShpShpDocDocTyCd = 'S047';
+$ShpShpDocDocTyCd = 'S047'; // **! Overwrites variable on line 359
 $ShpShpDocDocId = 'S047';
-$ShpShpDocDtm = 'S048';
+$ShpShpDocDtm = 'S048'; // **! Overwrites variable on line 364
 
 
 
@@ -876,7 +876,6 @@ $Mvmt = [ // array
 			['@MvmtNo' => $MvmtMvmtKeyMvmtNo4]
 		]
 	]
-
 ];
 
 // Shp composites
@@ -887,12 +886,82 @@ $ShpCustComponent = [ // arr
 		'CustRmk' => $ShpCustCustRmk,
 		'CustRolTyCd' => [ // arr
 			$ShpCustCustRolTyCd
+		],
+		'Addr' => [ // obj
+			'GI' => [
+				'LngCd' => [
+					'$' => $ShpCustAddrGILngCd
+				]
+			],
+			'BsnPty' => [ // object
+				'Indv' => [
+					'Nm' => $ShpCustAddrBsnPtyIndvNm
+				],
+				'Orgn' => [ // object
+					'Nm' => $ShpCustAddrBsnPtyOrgnNm
+				],
+				'Rgs' => [ //array
+					[ // obj
+						'No' => $ShpCustAddrBsnPtyRgsNo,
+						'CtryCd' => $ShpCustAddrBsnPtyRgsCtryCd,
+						'TyCd' => $ShpCustAddrBsnPtyRgsTyCd
+					]
+				]
+			],
+			'FrmtAddr' => [ // array
+				[ // obj
+					'PosCont' => [ // array
+						[
+							'$' => $ShpCustAddrFrmtAddrPosCont,
+							'FmtTyCd' => $ShpCustAddrFrmtAddrPosContFmtTyCd,
+							'id' => $ShpCustAddrFrmtAddrPosContId
+						],
+						[
+							'$' => $ShpCustAddrFrmtAddrPosCont2,
+							'FmtTyCd' => $ShpCustAddrFrmtAddrPosContFmtTyCd2,
+							'id' => $ShpCustAddrFrmtAddrPosContId2
+						],
+						[
+							'$' => $ShpCustAddrFrmtAddrPosCont3,
+							'FmtTyCd' => $ShpCustAddrFrmtAddrPosContFmtTyCd3,
+							'id' => $ShpCustAddrFrmtAddrPosContId3
+						]
+					]
+				]
+			],
+			'ActPntSp' => [ // obj
+				'Lty' => [ // obj
+					'CtyNm' => $ShpCustAddrActPntSpLtyCtyNm,
+					'Zip' => $ShpCustAddrActPntSpLtyZip,
+					'CtryDiv' => [ // array
+						[
+							'TyCd' => $ShpCustAddrActPntSpLtyCtryDivTyCd,
+							'Nm ' => $ShpCustAddrActPntSpLtyCtryDivNm
+						]
+					]
+				],
+				'CtryNm' => $ShpCustAddrActPntSpCtryNm,
+				'CtryCd' => $ShpCustAddrActPntSpCtryCd
+			]
+		],
+		'Cnt' => [ // array
+			[ // obj
+				'CommDev' => [ // array
+					[ // obj
+						'$' => $ShpCustCntCommDev,
+						'@TyCd' => $ShpCustCntCommDevTyCd
+					]
+				]
+			]
+		],
+		'Rgs' => [ // array
+			[ // obj
+				'No' => $ShpCustRgsNo
+			]
 		]
-
-		// To be continued .. 
-		 
 	]
 ];
+
 
 $Shp = [ // array
 	[ // obj
@@ -913,7 +982,6 @@ $Shp = [ // array
 					'@Uom' => $ShpMeasNetWgtUOM
 				]
 			]
-
 		],
 		'IncTrmCd' => $ShpIncTrmCd,
 		'PwkInd' => $ShpPwkInd,
@@ -927,15 +995,110 @@ $Shp = [ // array
 		'ExitCstOfcCd' => $ShpExitCstOfcCd,
 		'PlcOfLoadCd' => $ShpPlcOfLoadCd,
 		'PlcOfDischCd' => $ShpPlcOfDischCd,
-		'Cust' => $ShpCustComponent
+		'Cust' => $ShpCustComponent,
+		'MonAmt' => [ // array
+			[
+				'@TyCd' => $ShpMonAmtTyCd,
+				'Amt' => [
+					['$' => $ShpMonAmtAmt],
+					['@CurCd' => $ShpMonAmtAmtCurCd]
+				]
+			]
+		],
+		'Chrg' => [ // array
+			[
+				'@TyCd' => $ShpChrgTyCd,
+				'Amt' => [
+					['$' => $ShpChrgAmt],
+					['@CurCd' => $ShpChrgAmtCurCd]
+				]
+			]
+		],
+		'Srv' => [ // array
+			[ // obj
+				'GlSrvCd' => [ // obj
+					'$' => $ShpSrvGlSrvCd
+				],
+				'Chrg' => [ // array
+					[
+						'Amt' => [ // array
+							[
+								'$' => $ShpSrvChrgAmt,
+								'CurCd' => $ShpSrvChrgAmtCurCd
+							]
+						]
+					]
+				]
+			]
+		],
+		'DclNpcs' => $ShpDclNpcs,
+		'ShpDoc' => [ // array
+			[ // 'ShpDoc' obj
+				'DocTyCd' => $ShpShpDocDocTyCd,
+				'DocId' => $ShpShpDocDocId2,
+				'DocTyNm' => [ // arr
+					['$' => $ShpShpDocDocTyNm]
+				],
+				'DocSubTyCd' => $ShpShpDocDocSubTyCd,
+				'DocSubTyNm' => [ // arr
+					['$' => $ShpShpDocDocSubTyNm]
+				],
+				'Dtm' => [ // obj
+					'$' => $ShpShpDocDtm
+				]
 
+			],
+			[
+				'DocTyCd' => $ShpShpDocDocTyCd,
+				'DocId' => $ShpShpDocDocId,
+				'Dtm' => [ // obj
+					'$' => $ShpShpDocDtm
+				]
+			],
+			[
+				'CmrcInv' => [ // obj
+					'MonAmt' => [ // array
+						[ // obj
+							'TyCd' => $ShpShpDocCmrcInvMonAmtTyCd,
+							'Amt' => [ // array
+								[ // obj
+									'$' => $ShpShpDocCmrcInvMonAmtAmt,
+									'CurCd' => $ShpShpDocCmrcInvMonAmtAmtCurCd
+								]
+							]
+						]
+					]
+				]
+			],
+			[
+				'DocTyCd' => $ShpShpDocDocTyCd2,
+				'DocId' => $ShpShpDocDocId3
+			]
+		],
+		'St' => [ // array
+			[ // obj
+				'StCd' => [ // obj
+					'TyCd' => $ShpStStCdTyCd,
+					'Dtm' => $ShpStStCdDtm
+				]
+			]
+		],
+		'ActvDtm' => [ // obj
+			'$' => $ShpActvDtm,
+		],
+		'PdCntnCd' => $ShpPdCntnCd,
+		'ShpRef' => [ // array
+			[ // obj
+				'Ref' => $ShpShpRefRef,
+				'TyCd' => $ShpShpRefTyCd
+			]
+		]
 
 	]
 ];
 
 
-
-$RegDec = [
+$RegDec = [ // obj
 	'DocId' => $DocId,
 	'RegDecNo' => $RegDecNo,
 	'TyCd' => $TyCd,
