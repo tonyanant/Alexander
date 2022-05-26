@@ -17,677 +17,994 @@
                     ]
                 }
             ],
-            "RegDec": {
-                "DocId": "D002",
-                "RegDecNo": "D003",
-                "TyCd": "D004",
-                "Fnc": "D005",
-                "ExpDt": "D006",
-                "St": [
-                    {
-                        "StCd": [
-                            {
-                                "$": "D007",
-                                "@TyCd": "CLR",
-                                "@Dtm": "D007"
-                            },
-                            {
-                                "$": "RENTY",
-                                "@TyCd": "CLR",
-                                "@Dtm": "D008"
-                            },
-                            {
-                                "$": "ENTYS",
-                                "@TyCd": "CLR",
-                                "@Dtm": "D009"
-                            }
-                        ]
-                    }
-                ],
-                "AcpDt": "D010",
-                "DatElGrp": [
-                    {
-                        "@Cd": "DuePayDt",
-                        "DatEl": [
-                            {
-                                "Cd": "PayDt",
-                                "Val": "D011"
-                            },
-                            {
-                                "Cd": "PayTyCd",
-                                "Val": "D012"
-                            }
-                        ]
-                    }
-                ],
-                "Meas": [
-                    {
-                        "@TyCd": "TOT",
-                        "NetWgt": {
-                            "@Uom": "D013"
-                        },
-                        "GrossWgt": {
-                            "@Uom": "D014"
-                        }
-                    }
-                ],
-                "TotNoOfArtcl": "D015",
-                "AscDoc": [
-                    {
-                        "DocTyCd": "ENT",
-                        "DocId": "D016"
-                    }
-                ],
-                "GovProcTyCd": "D017",
-                "BsnPty": [
-                    {
-                        "RolTyCd": "BR",
-                        "BsnpTyCd": "D018"
-                    }
-                ],
-                "CurCd": "D019",
-                "MonAmt": [
-                    {
-                        "@TyCd": "TCSCH",
-                        "Amt": [
-                            {
-                                "$": "D020"
-                            },
-                            {
-                                "@CurCd": "D020"
-                            }
-                        ]
-                    },
-                    {
-                        "@TyCd": "TLHCH",
-                        "Amt": [
-                            {
-                                "$": "D021"
-                            },
-                            {
-                                "@CurCd": "D021"
-                            }
-                        ]
-                    },
-                    {
-                        "@TyCd": "TOTAX",
-                        "Amt": [
-                            {
-                                "$": "D022"
-                            },
-                            {
-                                "@CurCd": "D022"
-                            }
-                        ]
-                    },
-                    {
-                        "@TyCd": "TDCBV",
-                        "Amt": [
-                            {
-                                "$": "D047"
-                            },
-                            {
-                                "@CurCd": "D047"
-                            }
-                        ]
-                    }
-                ],
-                "CustChrg": [
-                    {
-                        "TyCd": "To be confirmed",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D023",
-                            "@CurCd": "D023"
-                        }
-                    },
-                    {
-                        "TyCd": "EXC",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D024",
-                            "@CurCd": "D024"
-                        }
-                    },
-                    {
-                        "TyCd": "VAT",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D025",
-                            "@CurCd": "D025"
-                        }
-                    },
-                    {
-                        "TyCd": "TAX",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D026",
-                            "@CurCd": "D026"
-                        }
-                    },
-                    {
-                        "TyCd": "UOT",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D027",
-                            "@CurCd": "D027"
-                        }
-                    },
-                    {
-                        "TyCd": "POX",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D028",
-                            "@CurCd": "D028"
-                        }
-                    },
-                    {
-                        "TyCd": "ADD",
-                        "Cat": "DUTY",
-                        "Amt": {
-                            "$": "D029",
-                            "@CurCd": "D029"
-                        }
-                    },
-                    {
-                        "TyCd": "CVD",
-                        "Cat": "DUTY",
-                        "Amt": {
-                            "$": "D030",
-                            "@CurCd": "D030"
-                        }
-                    },
-                    {
-                        "TyCd": "DTY",
-                        "Cat": "DUTY",
-                        "Amt": {
-                            "$": "D031",
-                            "@CurCd": "D031"
-                        }
-                    },
-                    {
-                        "TyCd": "ADT",
-                        "Cat": "DUTY",
-                        "Amt": {
-                            "$": "D032",
-                            "@CurCd": "D032"
-                        }
-                    },
-                    {
-                        "TyCd": "QUA",
-                        "Cat": "FEE",
-                        "Amt": {
-                            "$": "D033",
-                            "@CurCd": "D033"
-                        }
-                    },
-                    {
-                        "TyCd": "MPF",
-                        "Cat": "FEE",
-                        "Amt": {
-                            "$": "D034",
-                            "@CurCd": "D034"
-                        }
-                    },
-                    {
-                        "TyCd": "PEN",
-                        "Cat": "FEE",
-                        "Amt": {
-                            "$": "D035",
-                            "@CurCd": "D035"
-                        }
-                    },
-                    {
-                        "TyCd": "TZP",
-                        "Cat": "FEE",
-                        "Amt": {
-                            "$": "D036",
-                            "@CurCd": "D036"
-                        }
-                    },
-                    {
-                        "TyCd": "REG",
-                        "Cat": "FEE",
-                        "Amt": {
-                            "$": "D037",
-                            "@CurCd": "D037"
-                        }
-                    },
-                    {
-                        "TyCd": "DTF",
-                        "Cat": "FEE",
-                        "Amt": {
-                            "$": "D038",
-                            "@CurCd": "D038"
-                        }
-                    },
-                    {
-                        "TyCd": "To be confirmed",
-                        "Cat": "TAX",
-                        "Amt": {
-                            "$": "D046",
-                            "@CurCd": "D046"
-                        }
-                    }
-                ],
-                "GI": {
-                    "@SrcDtm": "D039",
-                    "@SrcAppNm": "D040",
-                    "@SrcCtryCd": "D041",
-                    "@SrcFcId": "D042",
-                    "@CorrId": "D049"
-                },
-                "PrefTreatment": {
-                    "Ind": "D043",
-                    "TyCd": "D044",
-                    "Nm": "D045"
-                },
-                "ExchRt": [
-                    {
-                        "$": "D048",
-                        "@TyCd": "D048",
-                        "@BCurCd": "D048",
-                        "@OCurCd": "D048"
-                    }
-                ],
-                "ReglBdCd": "D056",
-                "Cust": [
-                    {
-                        "Addr": {
-                            "FrmtAddr": [
+            "RegDec": [
+                {
+                    "DocId": "D002",
+                    "RegDecNo": "D003",
+                    "TyCd": "D004",
+                    "Fnc": "D005",
+                    "ExpDt": "D006",
+                    "St": [
+                        {
+                            "StCd": [
                                 {
-                                    "PosCont": {
-                                        "$": "D057",
-                                        "@FmtTyCd": "LINES",
-                                        "@Id": "1"
-                                    }
+                                    "$": "D007",
+                                    "@TyCd": "CLR",
+                                    "@Dtm": "D007"
+                                },
+                                {
+                                    "$": "RENTY",
+                                    "@TyCd": "CLR",
+                                    "@Dtm": "D008"
+                                },
+                                {
+                                    "$": "ENTYS",
+                                    "@TyCd": "CLR",
+                                    "@Dtm": "D009"
                                 }
                             ]
                         }
-                    }
-                ],
-                "DngGdsInd": "D058",
-                "Customs Form Description": "D060",
-                "RespStatus": [
-                    {
-                        "Sev": "10",
-                        "MsgClg": "DR01",
-                        "MsgCIgd": "DR01",
-                        "Dsc": "DR02",
-                        "GI": {
-                            "@SrcDtm": "DR03"
-                        }
-                    }
-                ],
-                "Mvmt": [
-                    {
-                        "MvmtKey": [
-                            {
-                                "@MvmtNo": "M001"
-                            },
-                            {
-                                "@MvmtNo": "M024"
-                            },
-                            {
-                                "@MvmtNo": "M025"
-                            },
-                            {
-                                "@MvmtNo": "M027"
-                            }
-                        ],
-                        "Crr": {
-                            "Nm": "M002",
-                            "BsnPtyCd": "M003"
-                        },
-                        "Veh": {
-                            "VehId": "M004",
-                            "MdOfTrns": {
-                                "$": "M005"
-                            },
-                            "FleetTy": {
-                                "$": "M006"
-                            },
-                            "VehRgsN": "M007",
-                            "RgsCtryCd": "M008"
-                        },
-                        "DptDtm": "M009",
-                        "ArrDtm": "M010",
-                        "DatElGrp": [
-                            {
-                                "@Cd": "DuePayDt",
-                                "DatEl": [
-                                    {
-                                        "Cd": "PayDt",
-                                        "Val": {
-                                            "$": "D011"
-                                        }
-                                    },
-                                    {
-                                        "Cd": "PayTyCd",
-                                        "Val": {
-                                            "$": "D012"
-                                        }
-                                    }
-                                ]
-                            }
-                        ],
-                        "OrgSrvaCd": "M012",
-                        "OrgIATACd": "M015",
-                        "DstSrvaCd": "M014",
-                        "DstIATACd": "M015",
-                        "Doc": [
-                            {
-                                "TyCd": "MWB",
-                                "id": "M016",
-                                "PcsInDoc": [
-                                    {
-                                        "PcsId": "M017",
-                                        "ShpId": "M021"
-                                    }
-                                ],
-                                "ShpInDoc": {
-                                    "ShpKey": {
-                                        "$": "HWB"
-                                    }
+                    ],
+                    "AcpDt": "D010",
+                    "DatElGrp": [
+                        {
+                            "@Cd": "DuePayDt",
+                            "DatEl": [
+                                {
+                                    "Cd": "PayDt",
+                                    "Val": "D011"
                                 },
-                                "HuInDoc": [
+                                {
+                                    "Cd": "PayTyCd",
+                                    "Val": "D012"
+                                }
+                            ]
+                        }
+                    ],
+                    "Meas": [
+                        {
+                            "@TyCd": "TOT",
+                            "NetWgt": {
+                                "@Uom": "D013"
+                            },
+                            "GrossWgt": {
+                                "@Uom": "D014"
+                            }
+                        }
+                    ],
+                    "TotNoOfArtcl": "D015",
+                    "AscDoc": [
+                        {
+                            "DocTyCd": "ENT",
+                            "DocId": "D016"
+                        }
+                    ],
+                    "GovProcTyCd": "D017",
+                    "BsnPty": [
+                        {
+                            "RolTyCd": [
+                                "BR"
+                            ],
+                            "BsnpTyCd": "D018"
+                        }
+                    ],
+                    "CurCd": "D019",
+                    "MonAmt": [
+                        {
+                            "@TyCd": "TCSCH",
+                            "Amt": [
+                                {
+                                    "$": "D020"
+                                },
+                                {
+                                    "@CurCd": "D020"
+                                }
+                            ]
+                        },
+                        {
+                            "@TyCd": "TLHCH",
+                            "Amt": [
+                                {
+                                    "$": "D021"
+                                },
+                                {
+                                    "@CurCd": "D021"
+                                }
+                            ]
+                        },
+                        {
+                            "@TyCd": "TOTAX",
+                            "Amt": [
+                                {
+                                    "$": "D022"
+                                },
+                                {
+                                    "@CurCd": "D022"
+                                }
+                            ]
+                        },
+                        {
+                            "@TyCd": "TDCBV",
+                            "Amt": [
+                                {
+                                    "$": "D047"
+                                },
+                                {
+                                    "@CurCd": "D047"
+                                }
+                            ]
+                        }
+                    ],
+                    "CustChrg": [
+                        {
+                            "TyCd": "To be confirmed",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D023",
+                                "@CurCd": "D023"
+                            }
+                        },
+                        {
+                            "TyCd": "EXC",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D024",
+                                "@CurCd": "D024"
+                            }
+                        },
+                        {
+                            "TyCd": "VAT",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D025",
+                                "@CurCd": "D025"
+                            }
+                        },
+                        {
+                            "TyCd": "TAX",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D026",
+                                "@CurCd": "D026"
+                            }
+                        },
+                        {
+                            "TyCd": "UOT",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D027",
+                                "@CurCd": "D027"
+                            }
+                        },
+                        {
+                            "TyCd": "POX",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D028",
+                                "@CurCd": "D028"
+                            }
+                        },
+                        {
+                            "TyCd": "ADD",
+                            "Cat": "DUTY",
+                            "Amt": {
+                                "$": "D029",
+                                "@CurCd": "D029"
+                            }
+                        },
+                        {
+                            "TyCd": "CVD",
+                            "Cat": "DUTY",
+                            "Amt": {
+                                "$": "D030",
+                                "@CurCd": "D030"
+                            }
+                        },
+                        {
+                            "TyCd": "DTY",
+                            "Cat": "DUTY",
+                            "Amt": {
+                                "$": "D031",
+                                "@CurCd": "D031"
+                            }
+                        },
+                        {
+                            "TyCd": "ADT",
+                            "Cat": "DUTY",
+                            "Amt": {
+                                "$": "D032",
+                                "@CurCd": "D032"
+                            }
+                        },
+                        {
+                            "TyCd": "QUA",
+                            "Cat": "FEE",
+                            "Amt": {
+                                "$": "D033",
+                                "@CurCd": "D033"
+                            }
+                        },
+                        {
+                            "TyCd": "MPF",
+                            "Cat": "FEE",
+                            "Amt": {
+                                "$": "D034",
+                                "@CurCd": "D034"
+                            }
+                        },
+                        {
+                            "TyCd": "PEN",
+                            "Cat": "FEE",
+                            "Amt": {
+                                "$": "D035",
+                                "@CurCd": "D035"
+                            }
+                        },
+                        {
+                            "TyCd": "TZP",
+                            "Cat": "FEE",
+                            "Amt": {
+                                "$": "D036",
+                                "@CurCd": "D036"
+                            }
+                        },
+                        {
+                            "TyCd": "REG",
+                            "Cat": "FEE",
+                            "Amt": {
+                                "$": "D037",
+                                "@CurCd": "D037"
+                            }
+                        },
+                        {
+                            "TyCd": "DTF",
+                            "Cat": "FEE",
+                            "Amt": {
+                                "$": "D038",
+                                "@CurCd": "D038"
+                            }
+                        },
+                        {
+                            "TyCd": "To be confirmed",
+                            "Cat": "TAX",
+                            "Amt": {
+                                "$": "D046",
+                                "@CurCd": "D046"
+                            }
+                        }
+                    ],
+                    "GI": {
+                        "@SrcDtm": "D039",
+                        "@SrcAppNm": "D040",
+                        "@SrcCtryCd": "D041",
+                        "@SrcFcId": "D042",
+                        "@CorrId": "D049"
+                    },
+                    "PrefTreatment": {
+                        "Ind": "D043",
+                        "TyCd": "D044",
+                        "Nm": "D045"
+                    },
+                    "ExchRt": [
+                        {
+                            "$": "D048",
+                            "@TyCd": "D048",
+                            "@BCurCd": "D048",
+                            "@OCurCd": "D048"
+                        }
+                    ],
+                    "ReglBdCd": "D056",
+                    "Cust": [
+                        {
+                            "Addr": {
+                                "FrmtAddr": [
                                     {
-                                        "HUId": "M023"
-                                    }
-                                ],
-                                "DatElGrp": [
-                                    {
-                                        "@Cd": "CommonGrp",
-                                        "DatEl": [
+                                        "PosCont": [
                                             {
-                                                "Cd": "NPcs",
-                                                "Val": {
-                                                    "$": "M018"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "@Cd": "Meas",
-                                        "DatEl": [
-                                            {
-                                                "Cd": "TyCd",
-                                                "Val": {
-                                                    "$": "ACT"
-                                                }
-                                            },
-                                            {
-                                                "Cd": "WgtUom",
-                                                "Val": {
-                                                    "$": "M019"
-                                                }
-                                            },
-                                            {
-                                                "Cd": "NetWgt",
-                                                "Val": {
-                                                    "$": "M019"
-                                                }
-                                            }
-                                        ]
-                                    },
-                                    {
-                                        "@Cd": "Meas",
-                                        "DatEl": [
-                                            {
-                                                "Cd": "TyCd",
-                                                "Val": {
-                                                    "$": "DEC"
-                                                }
-                                            },
-                                            {
-                                                "Cd": "WgtUom",
-                                                "Val": {
-                                                    "$": "M020"
-                                                }
-                                            },
-                                            {
-                                                "Cd": "GrossWgt",
-                                                "Val": {
-                                                    "$": "M020"
-                                                }
+                                                "$": "D057",
+                                                "@FmtTyCd": "LINES",
+                                                "@Id": "1"
                                             }
                                         ]
                                     }
                                 ]
                             }
-                        ],
-                        "ProcTy": "At arrival"
-                    }
-                ],
-                "Shp": [
-                    {
-                        "ShpKey": {
-                            "$": "S001"
-                        },
-                        "OrgSrvACd": "S002",
-                        "DstSrvACd": "S003",
-                        "ActNPcs": "S004",
-                        "Meas": [
-                            {
-                                "@TyCd": "DEC",
-                                "Wgt": {
-                                    "@Uom": "S005"
-                                }
-                            },
-                            {
-                                "@TyCd": "ACT",
-                                "NetWgt": {
-                                    "@Uom": "S006"
-                                }
+                        }
+                    ],
+                    "DngGdsInd": "D058",
+                    "Customs Form Description": "D060",
+                    "RespStatus": [
+                        {
+                            "Sev": "10",
+                            "MsgClg": "DR01",
+                            "MsgCIgd": "DR01",
+                            "Dsc": "DR02",
+                            "GI": {
+                                "@SrcDtm": "DR03"
                             }
-                        ],
-                        "IncTrmCd": "S007",
-                        "PwkInd": "S008",
-                        "RelCoInd": "S009",
-                        "RtdExTrInd": "S010",
-                        "Dsc": [
-                            {
-                                "$": "S011"
-                            }
-                        ],
-                        "LngCd": "S012",
-                        "EntrCstOfcCd": "S013",
-                        "ExitCstOfcCd": "S014",
-                        "PlcOfLoadCd": "S015",
-                        "PlcOfDischCd": "S016",
-                        "Cust": [
-                            {
-                                "CustId": "S017",
-                                "NtwAccNo": "S018",
-                                "CustRmk": "S019",
-                                "CustRolTyCd": [
-                                    "S020"
+                        }
+                    ],
+                    "Mvmt": [
+                        {
+                            "MvmtKey": [
+                                {
+                                    "@MvmtNo": "M001",
+                                    "@MvmtDt": "M001"
+                                },
+                                {
+                                    "@MvmtNo": "M024"
+                                },
+                                {
+                                    "@MvmtNo": "M025"
+                                },
+                                {
+                                    "@MvmtNo": "M027"
+                                }
+                            ],
+                            "Crr": {
+                                "Nm": [
+                                    {
+                                        "$": "M002"
+                                    }
                                 ],
-                                "Addr": {
-                                    "GI": {
-                                        "LngCd": {
-                                            "$": "S055"
-                                        }
-                                    },
-                                    "BsnPty": {
-                                        "Indv": {
-                                            "Nm": "S022"
-                                        },
-                                        "Orgn": {
-                                            "Nm": "S023"
-                                        },
-                                        "Rgs": [
-                                            {
-                                                "No": "S024",
-                                                "CtryCd": "S025",
-                                                "TyCd": "S026"
-                                            }
-                                        ]
-                                    },
-                                    "FrmtAddr": [
+                                "BsnPtyCd": "M003"
+                            },
+                            "Veh": {
+                                "VehId": "M004",
+                                "MdOfTrns": {
+                                    "$": "M005"
+                                },
+                                "FleetTy": {
+                                    "$": "M006"
+                                },
+                                "VehRgsN": "M007",
+                                "RgsCtryCd": "M008"
+                            },
+                            "DptDtm": "M009",
+                            "ArrDtm": "M010",
+                            "DatElGrp": [
+                                {
+                                    "@Cd": "DuePayDt",
+                                    "DatEl": [
                                         {
-                                            "PosCont": [
-                                                {
-                                                    "$": "S027",
-                                                    "FmtTyCd": "LINES",
-                                                    "id": "1"
-                                                },
-                                                {
-                                                    "$": "S028",
-                                                    "FmtTyCd": "LINES",
-                                                    "id": "2"
-                                                },
-                                                {
-                                                    "$": "S029",
-                                                    "FmtTyCd": "LINES",
-                                                    "id": "3"
-                                                }
-                                            ]
+                                            "Cd": "PayDt",
+                                            "Val": {
+                                                "$": "D011"
+                                            }
+                                        },
+                                        {
+                                            "Cd": "PayTyCd",
+                                            "Val": {
+                                                "$": "D012"
+                                            }
+                                        }
+                                    ]
+                                }
+                            ],
+                            "OrgSrvaCd": "M012",
+                            "OrgIATACd": "M015",
+                            "DstSrvaCd": "M014",
+                            "DstIATACd": "M015",
+                            "Doc": [
+                                {
+                                    "TyCd": "MWB",
+                                    "id": "M016",
+                                    "PcsInDoc": [
+                                        {
+                                            "PcsId": "M017",
+                                            "ShpId": "M021"
                                         }
                                     ],
-                                    "ActPntSp": {
-                                        "Lty": {
-                                            "CtyNm": "S030",
-                                            "Zip": "S031",
-                                            "CtryDiv": [
+                                    "ShpInDoc": {
+                                        "ShpKey": {
+                                            "$": "HWB"
+                                        }
+                                    },
+                                    "HuInDoc": [
+                                        {
+                                            "HUId": "M023"
+                                        }
+                                    ],
+                                    "DatElGrp": [
+                                        {
+                                            "@Cd": "CommonGrp",
+                                            "DatEl": [
                                                 {
-                                                    "TyCd": "S",
-                                                    "Nm ": "S032"
+                                                    "Cd": "NPcs",
+                                                    "Val": {
+                                                        "$": "M018"
+                                                    }
                                                 }
                                             ]
                                         },
-                                        "CtryNm": "S033",
-                                        "CtryCd": "S034"
-                                    }
-                                },
-                                "Cnt": [
-                                    {
-                                        "CommDev": [
-                                            {
-                                                "$": "S035",
-                                                "@TyCd": "S036"
-                                            }
-                                        ]
-                                    }
-                                ],
-                                "Rgs": [
-                                    {
-                                        "No": "S056"
-                                    }
-                                ]
-                            }
-                        ],
-                        "MonAmt": [
-                            {
-                                "@TyCd": "SCUSV",
-                                "Amt": [
-                                    {
-                                        "$": "S037"
-                                    },
-                                    {
-                                        "@CurCd": "S037"
-                                    }
-                                ]
-                            }
-                        ],
-                        "Chrg": [
-                            {
-                                "@TyCd": "TRNPRT",
-                                "Amt": [
-                                    {
-                                        "$": "S038"
-                                    },
-                                    {
-                                        "@CurCd": "S038"
-                                    }
-                                ]
-                            }
-                        ],
-                        "Srv": [
-                            {
-                                "GlSrvCd": {
-                                    "$": "II"
-                                },
-                                "Chrg": [
-                                    {
-                                        "Amt": [
-                                            {
-                                                "$": "S039",
-                                                "CurCd": "S039"
-                                            }
-                                        ]
-                                    }
-                                ]
-                            }
-                        ],
-                        "DclNpcs": "S040",
-                        "ShpDoc": [
-                            {
-                                "DocTyCd": "S047",
-                                "DocId": "S042",
-                                "DocTyNm": [
-                                    {
-                                        "$": "S043"
-                                    }
-                                ],
-                                "DocSubTyCd": "S044",
-                                "DocSubTyNm": [
-                                    {
-                                        "$": "S045"
-                                    }
-                                ],
-                                "Dtm": {
-                                    "$": "S048"
-                                }
-                            },
-                            {
-                                "DocTyCd": "S047",
-                                "DocId": "S047",
-                                "Dtm": {
-                                    "$": "S048"
-                                }
-                            },
-                            {
-                                "CmrcInv": {
-                                    "MonAmt": [
                                         {
-                                            "TyCd": "TINVA",
-                                            "Amt": [
+                                            "@Cd": "Meas",
+                                            "DatEl": [
                                                 {
-                                                    "$": "S049",
-                                                    "CurCd": "S049"
+                                                    "Cd": "TyCd",
+                                                    "Val": {
+                                                        "$": "ACT"
+                                                    }
+                                                },
+                                                {
+                                                    "Cd": "WgtUom",
+                                                    "Val": {
+                                                        "$": "M019"
+                                                    }
+                                                },
+                                                {
+                                                    "Cd": "NetWgt",
+                                                    "Val": {
+                                                        "$": "M019"
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                        {
+                                            "@Cd": "Meas",
+                                            "DatEl": [
+                                                {
+                                                    "Cd": "TyCd",
+                                                    "Val": {
+                                                        "$": "DEC"
+                                                    }
+                                                },
+                                                {
+                                                    "Cd": "WgtUom",
+                                                    "Val": {
+                                                        "$": "M020"
+                                                    }
+                                                },
+                                                {
+                                                    "Cd": "GrossWgt",
+                                                    "Val": {
+                                                        "$": "M020"
+                                                    }
                                                 }
                                             ]
                                         }
                                     ]
                                 }
+                            ],
+                            "ProcTy": "At arrival"
+                        }
+                    ],
+                    "Shp": [
+                        {
+                            "ShpKey": {
+                                "$": "S001"
                             },
-                            {
-                                "DocTyCd": "To be confirmed",
-                                "DocId": "S050"
-                            }
-                        ],
-                        "St": [
-                            {
-                                "StCd": {
-                                    "TyCd": "CLR",
-                                    "Dtm": "S051"
+                            "OrgSrvACd": "S002",
+                            "DstSrvACd": "S003",
+                            "ActNPcs": "S004",
+                            "Meas": [
+                                {
+                                    "@TyCd": "DEC",
+                                    "Wgt": {
+                                        "@Uom": "S005"
+                                    }
+                                },
+                                {
+                                    "@TyCd": "ACT",
+                                    "NetWgt": {
+                                        "@Uom": "S006"
+                                    }
                                 }
-                            }
-                        ],
-                        "ActvDtm": {
-                            "$": "S052"
-                        },
-                        "PdCntnCd": "S053",
-                        "ShpRef": [
-                            {
-                                "Ref": "S054",
-                                "TyCd": "S054"
-                            }
-                        ]
-                    }
-                ]
-            }
+                            ],
+                            "IncTrmCd": "S007",
+                            "PwkInd": "S008",
+                            "RelCoInd": "S009",
+                            "RtdExTrInd": "S010",
+                            "Dsc": [
+                                {
+                                    "$": "S011"
+                                }
+                            ],
+                            "LngCd": "S012",
+                            "EntrCstOfcCd": "S013",
+                            "ExitCstOfcCd": "S014",
+                            "PlcOfLoadCd": "S015",
+                            "PlcOfDischCd": "S016",
+                            "Cust": [
+                                {
+                                    "CustId": "S017",
+                                    "NtwAccNo": "S018",
+                                    "CustRmk": "S019",
+                                    "CustRolTyCd": [
+                                        "S020"
+                                    ],
+                                    "Addr": {
+                                        "GI": {
+                                            "LngCd": {
+                                                "$": "S055"
+                                            }
+                                        },
+                                        "BsnPty": {
+                                            "Indv": {
+                                                "Nm": "S022"
+                                            },
+                                            "Orgn": {
+                                                "Nm": "S023"
+                                            },
+                                            "Rgs": [
+                                                {
+                                                    "No": "S024",
+                                                    "CtryCd": "S025",
+                                                    "TyCd": "S026"
+                                                }
+                                            ]
+                                        },
+                                        "FrmtAddr": [
+                                            {
+                                                "PosCont": [
+                                                    {
+                                                        "$": "S027",
+                                                        "FmtTyCd": "LINES",
+                                                        "id": "1"
+                                                    },
+                                                    {
+                                                        "$": "S028",
+                                                        "FmtTyCd": "LINES",
+                                                        "id": "2"
+                                                    },
+                                                    {
+                                                        "$": "S029",
+                                                        "FmtTyCd": "LINES",
+                                                        "id": "3"
+                                                    }
+                                                ]
+                                            }
+                                        ],
+                                        "ActPntSp": {
+                                            "Lty": {
+                                                "CtyNm": "S030",
+                                                "Zip": "S031",
+                                                "CtryDiv": [
+                                                    {
+                                                        "TyCd": "S",
+                                                        "Nm ": "S032"
+                                                    }
+                                                ]
+                                            },
+                                            "CtryNm": "S033",
+                                            "CtryCd": "S034"
+                                        }
+                                    },
+                                    "Cnt": [
+                                        {
+                                            "CommDev": [
+                                                {
+                                                    "$": "S035",
+                                                    "@TyCd": "S036"
+                                                }
+                                            ]
+                                        }
+                                    ],
+                                    "Rgs": [
+                                        {
+                                            "No": "S056"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "MonAmt": [
+                                {
+                                    "@TyCd": "SCUSV",
+                                    "Amt": [
+                                        {
+                                            "$": "S037"
+                                        },
+                                        {
+                                            "@CurCd": "S037"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Chrg": [
+                                {
+                                    "@TyCd": "TRNPRT",
+                                    "Amt": [
+                                        {
+                                            "$": "S038"
+                                        },
+                                        {
+                                            "@CurCd": "S038"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "Srv": [
+                                {
+                                    "GlSrvCd": {
+                                        "$": "II"
+                                    },
+                                    "Chrg": [
+                                        {
+                                            "Amt": [
+                                                {
+                                                    "$": "S039",
+                                                    "CurCd": "S039"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ],
+                            "DclNpcs": "S040",
+                            "ShpDoc": [
+                                {
+                                    "DocTyCd": "S047",
+                                    "DocId": "S042",
+                                    "DocTyNm": [
+                                        {
+                                            "$": "S043"
+                                        }
+                                    ],
+                                    "DocSubTyCd": "S044",
+                                    "DocSubTyNm": [
+                                        {
+                                            "$": "S045"
+                                        }
+                                    ],
+                                    "Dtm": {
+                                        "$": "S048"
+                                    }
+                                },
+                                {
+                                    "DocTyCd": "S047",
+                                    "DocId": "S047",
+                                    "Dtm": {
+                                        "$": "S048"
+                                    }
+                                },
+                                {
+                                    "CmrcInv": {
+                                        "MonAmt": [
+                                            {
+                                                "TyCd": "TINVA",
+                                                "Amt": [
+                                                    {
+                                                        "$": "S049",
+                                                        "CurCd": "S049"
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "DocTyCd": "To be confirmed",
+                                    "DocId": "S050"
+                                }
+                            ],
+                            "St": [
+                                {
+                                    "StCd": {
+                                        "TyCd": "CLR",
+                                        "Dtm": "S051"
+                                    }
+                                }
+                            ],
+                            "ActvDtm": {
+                                "$": "S052"
+                            },
+                            "PdCntnCd": "S053",
+                            "ShpRef": [
+                                {
+                                    "Ref": "S054",
+                                    "TyCd": "S054"
+                                }
+                            ]
+                        }
+                    ],
+                    "Ln": [
+                        {
+                            "LnNo": "L001",
+                            "SubLn": [
+                                {
+                                    "LnNo": "L002"
+                                }
+                            ],
+                            "Ref": [
+                                {
+                                    "$": "L003",
+                                    "TyCd": "HWB"
+                                },
+                                {
+                                    "$": "L004",
+                                    "TyCd": "L004"
+                                }
+                            ],
+                            "Qty": {
+                                "$": "L005",
+                                "Uom": "L005"
+                            },
+                            "DscGds": [
+                                {
+                                    "$": "L006",
+                                    "LngCd": "ENG"
+                                },
+                                {
+                                    "$": "L007",
+                                    "LngCd": "L007"
+                                }
+                            ],
+                            "DngGdsInd": "L008",
+                            "GovProcTyCd": "L009",
+                            "PartNo": [
+                                {
+                                    "$": "L010"
+                                }
+                            ],
+                            "CmdtClss": {
+                                "Ib": "L011",
+                                "Ob": "L012"
+                            },
+                            "HrmnCmdtCd": "L013",
+                            "ManCtryCd": "L014",
+                            "Meas": [
+                                {
+                                    "TyCd": "L015",
+                                    "GrossWgt": {
+                                        "Uom": "L015"
+                                    }
+                                },
+                                {
+                                    "TyCd": "L016",
+                                    "NetWgt": {
+                                        "Uom": "L016"
+                                    }
+                                }
+                            ],
+                            "AddQty": [
+                                {
+                                    "Uom": "L017"
+                                }
+                            ],
+                            "ExpLicCd": "L018",
+                            "ExpLicNo": "L019",
+                            "ImpLicCd": "L020",
+                            "ImpLicNo": "L021",
+                            "AscDoc": [
+                                {
+                                    "DocId": "L022",
+                                    "DocTyCd": "L023",
+                                    "DocTyNm": {
+                                        "$": "L024"
+                                    },
+                                    "DocSbTyCd": "L025",
+                                    "DocSbTyNm": {
+                                        "$": "L026"
+                                    },
+                                    "Dtm": {
+                                        "$": "L027"
+                                    }
+                                }
+                            ],
+                            "ExchRt": [
+                                {
+                                    "TyCd": "L028",
+                                    "BCurCd": "L028",
+                                    "OCurCd": "L028"
+                                }
+                            ],
+                            "MonAmt": [
+                                {
+                                    "TyCd": "TCUSV",
+                                    "Amt": [
+                                        {
+                                            "CurCd": "L029"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "TyCd": "ACUSV",
+                                    "Amt": [
+                                        {
+                                            "CurCd": "L054"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "TyCd": "TDCBV",
+                                    "Amt": [
+                                        {
+                                            "CurCd": "L050"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "TyCd": "TCSCH",
+                                    "Amt": [
+                                        {
+                                            "CurCd": "L051"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "TyCd": "TLHCH",
+                                    "Amt": [
+                                        {
+                                            "CurCd": "L052"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "TyCd": "TOTAX",
+                                    "Amt": [
+                                        {
+                                            "CurCd": "L053"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "SrvChrg": [
+                                {
+                                    "GlSrvCd": {
+                                        "GlProdSrvClssCd": "L030"
+                                    },
+                                    "Amt": {
+                                        "$": "L030",
+                                        "CurCd": "L030"
+                                    }
+                                }
+                            ],
+                            "CustChrg": [
+                                {
+                                    "TyCd": "To be confirmed",
+                                    "Cat": "TAX",
+                                    "Rt": "L031",
+                                    "Amt": {
+                                        "$": "L031",
+                                        "CurCd": "L031"
+                                    }
+                                },
+                                {
+                                    "TyCd": "EXC",
+                                    "Cat": "TAX",
+                                    "Rt": "L032",
+                                    "Amt": {
+                                        "$": "L032",
+                                        "CurCd": "L032"
+                                    }
+                                },
+                                {
+                                    "TyCd": "VAT",
+                                    "Cat": "TAX",
+                                    "Rt": "L033",
+                                    "Amt": {
+                                        "$": "L033",
+                                        "CurCd": "L033"
+                                    }
+                                },
+                                {
+                                    "TyCd": "TAX",
+                                    "Cat": "TAX",
+                                    "Rt": "L034",
+                                    "Amt": {
+                                        "$": "L034",
+                                        "CurCd": "L034"
+                                    }
+                                },
+                                {
+                                    "TyCd": "UOT",
+                                    "Cat": "TAX",
+                                    "Rt": "L035",
+                                    "Amt": {
+                                        "$": "L035",
+                                        "CurCd": "L035"
+                                    }
+                                },
+                                {
+                                    "TyCd": "POX",
+                                    "Cat": "TAX",
+                                    "Rt": "L036",
+                                    "Amt": {
+                                        "$": "L036",
+                                        "CurCd": "L036"
+                                    }
+                                },
+                                {
+                                    "TyCd": "ADD",
+                                    "Cat": "DUTY",
+                                    "Rt": "L037",
+                                    "Amt": {
+                                        "$": "L037",
+                                        "CurCd": "L037"
+                                    }
+                                },
+                                {
+                                    "TyCd": "CVD",
+                                    "Cat": "DUTY",
+                                    "Rt": "L038",
+                                    "Amt": {
+                                        "$": "L038",
+                                        "CurCd": "L038"
+                                    }
+                                },
+                                {
+                                    "TyCd": "DTY",
+                                    "Cat": "DUTY",
+                                    "Rt": "L039",
+                                    "Amt": {
+                                        "$": "L039",
+                                        "CurCd": "L039"
+                                    }
+                                },
+                                {
+                                    "TyCd": "ADT",
+                                    "Cat": "DUTY",
+                                    "Rt": "L040",
+                                    "Amt": {
+                                        "$": "L040",
+                                        "CurCd": "L040"
+                                    }
+                                },
+                                {
+                                    "TyCd": "QUA",
+                                    "Cat": "FEE",
+                                    "Rt": "L041",
+                                    "Amt": {
+                                        "$": "L041",
+                                        "CurCd": "L041"
+                                    }
+                                },
+                                {
+                                    "TyCd": "MPF",
+                                    "Cat": "FEE",
+                                    "Rt": "L042",
+                                    "Amt": {
+                                        "$": "L042",
+                                        "CurCd": "L042"
+                                    }
+                                },
+                                {
+                                    "TyCd": "PEN",
+                                    "Cat": "FEE",
+                                    "Rt": "L043",
+                                    "Amt": {
+                                        "$": "L043",
+                                        "CurCd": "L043"
+                                    }
+                                },
+                                {
+                                    "TyCd": "TZP",
+                                    "Cat": "FEE",
+                                    "Rt": "L044",
+                                    "Amt": {
+                                        "$": "L044",
+                                        "CurCd": "L044"
+                                    }
+                                },
+                                {
+                                    "TyCd": "REG",
+                                    "Cat": "FEE",
+                                    "Rt": "L045",
+                                    "Amt": {
+                                        "$": "L045",
+                                        "CurCd": "L045"
+                                    }
+                                },
+                                {
+                                    "TyCd": "DTF",
+                                    "Cat": "FEE",
+                                    "Rt": "L046",
+                                    "Amt": {
+                                        "$": "L046",
+                                        "CurCd": "L046"
+                                    }
+                                }
+                            ],
+                            "PrefTreatment": {
+                                "Ind": "L047",
+                                "TyCd": "L048",
+                                "Nm": "L049"
+                            },
+                            "PrevGovProcTyCd": "L055"
+                        }
+                    ]
+                }
+            ]
         }
     }
 }

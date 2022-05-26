@@ -569,16 +569,16 @@ $LnMonAmtAmtCurCd6 = 'L053';
 
 $LnPrevGovProcTyCd = 'L055';
 
-//arrays
+// Arrays
 $Hdr = [
 	'@Id' => 'D052',
 	'@Ver' => 'D051'
 ];
 
-$GenReq = [
-	[
-		'GenrcRqCritr' => [
-			[
+$GenReq = [ // arr
+	[ // obj
+		'GenrcRqCritr' => [ // array
+			[ // obj
 				'@TyCd' => $GenrcRqCritrTyCd,
 				'Val' => [$GenrcRqCritrVal]
 			]
@@ -586,9 +586,9 @@ $GenReq = [
 	]
 ];
 
-$St = [
-	[
-		"StCd" => [
+$St = [ // array
+	[ // obj
+		"StCd" => [ // array
 			["$" => $StStCd1, '@TyCd' => $StStCdTyCd1, '@Dtm' => $StStCdDtm1],
 			["$" => $StStCd2, '@TyCd' => $StStCdTyCd2, '@Dtm' => $StStCdDtm2],
 			["$" => $StStCd3, '@TyCd' => $StStCdTyCd3, '@Dtm' => $StStCdDtm3]
@@ -596,60 +596,74 @@ $St = [
 	]
 ];
 
-$DatElGrp = [
-	[
+$DatElGrp = [ // array
+	[ // obj
 		'@Cd' => $DatElGrpCd,
-		'DatEl' => [
+		'DatEl' => [ // array
 			['Cd' => $DatElGrpDatElCd1, 'Val' => $DatElGrpDatElVal1],
 			['Cd' => $DatElGrpDatElCd2, 'Val' => $DatElGrpDatElVal2],
 		]
 	]
 ];
 
-$Meas = [
-	[
+$Meas = [ // array
+	[ // obj
 		'@TyCd' => $MeasTyCd,
-		'NetWgt' => ['@Uom' => $MeasNetWgtUom],
-		'GrossWgt' => ['@Uom' => $MeasGrossWgtUom]
+		'NetWgt' => [
+			'@Uom' => $MeasNetWgtUom
+		],
+		'GrossWgt' => [
+			'@Uom' => $MeasGrossWgtUom
+		]
 	]
 ];
 
-$AscDoc = [
-	[
+$AscDoc = [ // array
+	[ // obj
 		'DocTyCd' => $AscDocDocTyCd,
 		'DocId' => $AscDocDocId,
 	]
 ];
 
-$BsnPty = [
-	[
-		'RolTyCd' => $BsnPtyRolTyCd,
+$BsnPty = [ // array
+	[ // obj
+		'RolTyCd' => [$BsnPtyRolTyCd],
 		'BsnpTyCd' => $BsnPtyBsnpTyCd,
 	]
 ];
 
 // Create MonAmt array with initial MonAmt object
-$MonAmt = [
-	[
+$MonAmt = [ // array
+	[ // obj
 		'@TyCd' => $MonAmtTyCd,
 		'Amt' => [
 			['$' => $MonAmtAmt],
 			['@CurCd' => $MonAmtAmtCurCd]
 		]
-	]
-];
-// Dynamically collect all $MonAmt* variables, create objects & add to $MonAmt array
-for ($i = 2; $i < 5; $i++) {
-	$MonAmtObj = [
-		'@TyCd' => ${'MonAmtTyCd' . $i},
+	],
+	[ // obj
+		'@TyCd' => $MonAmtTyCd2,
 		'Amt' => [
-			['$' => ${'MonAmtAmt' . $i}],
-			['@CurCd' => ${'MonAmtAmtCurCd' . $i}]
+			['$' => $MonAmtAmt2],
+			['@CurCd' => $MonAmtAmtCurCd2]
 		]
-	];
+	],
+	[ // obj
+		'@TyCd' => $MonAmtTyCd3,
+		'Amt' => [
+			['$' => $MonAmtAmt3],
+			['@CurCd' => $MonAmtAmtCurCd3]
+		]
+	],
+	[ // obj
+		'@TyCd' => $MonAmtTyCd4,
+		'Amt' => [
+			['$' => $MonAmtAmt4],
+			['@CurCd' => $MonAmtAmtCurCd4]
+		]
+	],
 
-	array_push($MonAmt, $MonAmtObj);
-}
+];
 
 // Create CustChrg array with initial CustChrg object
 $CustChrg = [
@@ -676,7 +690,7 @@ for ($i = 2; $i < 18; $i++) {
 	array_push($CustChrg, $CustChrgObj);
 }
 
-$GI = [
+$GI = [ // obj
 	'@SrcDtm' => $GISrcDtm,
 	'@SrcAppNm' => $GISrcAppNm,
 	'@SrcCtryCd' => $GISrcCtryCd,
@@ -690,25 +704,28 @@ $PrefTreatment = [
 	'Nm' => $PrefTreatmentNm
 ];
 
-$ExchRt_json = [
-	[
+$ExchRt_component = [ // arr
+	[ // obj
 		'$' => $ExchRt,
 		'@TyCd' => $ExchRtTyCd,
 		'@BCurCd' => $ExchRtBCurCd,
 		'@OCurCd' => $ExchRtOCurCd
-
 	]
 ];
 
 $Cust = [ // array
-	[
+	[ // obj
 		'Addr' => [ // obj
 			'FrmtAddr' => [ // array
-				['PosCont' => [ // obj
-					'$' => $CustAddrFrmtAddrPosCont,
-					'@FmtTyCd' => $CustAddrFrmtAddrPosContFmtTyCd,
-					'@Id' => $CustAddrFrmtAddrPosContId
-				]]
+				[
+					'PosCont' => [ // arr
+						[ // obj
+							'$' => $CustAddrFrmtAddrPosCont,
+							'@FmtTyCd' => $CustAddrFrmtAddrPosContFmtTyCd,
+							'@Id' => $CustAddrFrmtAddrPosContId
+						]
+					]
+				]
 			]
 		]
 	]
@@ -733,7 +750,9 @@ $MvmtKey = [ // obj
 ];
 
 $Crr = [ // obj
-	'Nm' => $MvmtCrrNm,
+	'Nm' => [ // arr
+		['$' => $MvmtCrrNm]
+	],
 	'BsnPtyCd' => $MvmtCrrBsnPtyCd
 ];
 
@@ -849,14 +868,11 @@ $Doc = [ // arr
 			]
 
 		]
-
-
 	]
-
 ];
 
 $Mvmt = [ // array
-	[
+	[ // obj
 		'MvmtKey' => $MvmtKey,
 		'Crr' => $Crr,
 		'Veh' => $Veh,
@@ -869,8 +885,11 @@ $Mvmt = [ // array
 		'DstIATACd' => $MvmtDstIATACd,
 		'Doc' => $Doc,
 		'ProcTy' => $MvmtProcTy,
-		'MvmtKey' => [
-			['@MvmtNo' => $MvmtMvmtKeyMvmtNo],
+		'MvmtKey' => [ // arr
+			[ // obj
+				'@MvmtNo' => $MvmtMvmtKeyMvmtNo,
+				'@MvmtDt' => $MvmtMvmtKeyMvmtDt
+			],
 			['@MvmtNo' => $MvmtMvmtKeyMvmtNo2],
 			['@MvmtNo' => $MvmtMvmtKeyMvmtNo3],
 			['@MvmtNo' => $MvmtMvmtKeyMvmtNo4]
@@ -888,13 +907,13 @@ $ShpCustComponent = [ // arr
 			$ShpCustCustRolTyCd
 		],
 		'Addr' => [ // obj
-			'GI' => [
-				'LngCd' => [
+			'GI' => [ // obj
+				'LngCd' => [ // obj
 					'$' => $ShpCustAddrGILngCd
 				]
 			],
-			'BsnPty' => [ // object
-				'Indv' => [
+			'BsnPty' => [ // obj
+				'Indv' => [ // obj
 					'Nm' => $ShpCustAddrBsnPtyIndvNm
 				],
 				'Orgn' => [ // object
@@ -970,7 +989,7 @@ $Shp = [ // array
 		'DstSrvACd' => $ShpDstSrvACd, // str
 		'ActNPcs' => $ShpActNPcs, // num
 		'Meas' => [ // arr
-			[
+			[ // obj
 				'@TyCd' => $ShpMeasTyCd, // str
 				'Wgt' => [ // obj
 					'@Uom' => $ShpMeasWgtUOM
@@ -1006,7 +1025,7 @@ $Shp = [ // array
 			]
 		],
 		'Chrg' => [ // array
-			[
+			[ // obj
 				'@TyCd' => $ShpChrgTyCd,
 				'Amt' => [
 					['$' => $ShpChrgAmt],
@@ -1093,38 +1112,347 @@ $Shp = [ // array
 				'TyCd' => $ShpShpRefTyCd
 			]
 		]
-
 	]
 ];
 
+$Ln = [ //array
+	[ // obj
+		'LnNo' => $LnLnNo,
+		'SubLn' => [ // array
+			[ // obj
+				'LnNo' => $LnSubLnLnNo
+			]
+		],
+		'Ref' => [ // arr
+			[
+				'$' => $LnRef,
+				'TyCd' => $LnRefTyCd
+			],
+			[
+				'$' => $LnRef2,
+				'TyCd' => $LnRefTyCd2
+			]
+		],
+		'Qty' => [ // obj
+			'$' => $LnQty,
+			'Uom' => $LnQtyUom
+		],
+		'DscGds' => [ // arr
+			[
+				'$' => $LnDscGds,
+				'LngCd' => $LnDscGdsLngCd
+			],
+			[
+				'$' => $LnDscGds2,
+				'LngCd' => $LnDscGdsLngCd2
+			]
+		],
+		'DngGdsInd' => $LnDngGdsInd,
+		'GovProcTyCd' => $LnGovProcTyCd,
+		'PartNo' => [ // arr
+			[
+				'$' => $LnPartNo
+			]
+		],
+		'CmdtClss' => [
+			'Ib' => $LnCmdtClssIb,
+			'Ob' => $LnCmdtClssOb
+		],
+		'HrmnCmdtCd' => $LnHrmnCmdtCd,
+		'ManCtryCd' => $LnManCtryCd,
+		'Meas' => [ // arr
+			[
+				'TyCd' => $LnMeasTyCd,
+				'GrossWgt' => [ // obj
+					'Uom' => $LnMeasGrossWgt
+				]
+			],
+			[
+				'TyCd' => $LnMeasTyCd2,
+				'NetWgt' => [ // obj
+					'Uom' => $LnMeasNetWgt
+				]
+			]
+		],
+		'AddQty' => [ // array
+			[ // obj
+				'Uom' => $LnAddQtyUom
+			]
+		],
+		'ExpLicCd' => $LnExpLicCd,
+		'ExpLicNo' => $LnExpLicNo,
+		'ImpLicCd' => $LnImpLicCd,
+		'ImpLicNo' => $LnImpLicNo,
+		'AscDoc' => [ // arr
+			[
+				'DocId' => $LnAscDocDocId,
+				'DocTyCd' => $LnAscDocDocTyCd,
+				'DocTyNm' => [ // arr
+					'$' => $LnAscDocDocTyNm
+				],
+				'DocSbTyCd' => $LnAscDocDocSbTyCd,
+				'DocSbTyNm' => [ // arr
+					'$' => $LnAscDocDocSbTyNm
+				],
+				'Dtm' => [ // obj
+					'$' => $LnAscDocDtm
+				]
+			]
+		],
+		'ExchRt' => [ // arr
+			[
+				'TyCd' => $LnExchRtTyCd,
+				'BCurCd' => $LnExchRtBCurCd,
+				'OCurCd' => $LnExchRtOCurCd
+			]
+		],
+		'MonAmt' => [ // arr
+			[
+				'TyCd' => $LnMonAmtTyCd,
+				'Amt' => [ // Arr
+					[
+						'CurCd' => $LnMonAmtAmtCurCd
+					]
+				]
+			],
+			[
+				'TyCd' => $LnMonAmtTyCd2,
+				'Amt' => [ // Arr
+					[
+						'CurCd' => $LnMonAmtAmtCurCd2
+					]
+				]
+			],
+			[
+				'TyCd' => $LnMonAmtTyCd3,
+				'Amt' => [ // Arr
+					[
+						'CurCd' => $LnMonAmtAmtCurCd3
+					]
+				]
+			],
+			[
+				'TyCd' => $LnMonAmtTyCd4,
+				'Amt' => [ // Arr
+					[
+						'CurCd' => $LnMonAmtAmtCurCd4
+					]
+				]
+			],
+			[
+				'TyCd' => $LnMonAmtTyCd5,
+				'Amt' => [ // Arr
+					[
+						'CurCd' => $LnMonAmtAmtCurCd5
+					]
+				]
+			],
+			[
+				'TyCd' => $LnMonAmtTyCd6,
+				'Amt' => [ // Arr
+					[
+						'CurCd' => $LnMonAmtAmtCurCd6
+					]
+				]
+			]
+		],
+		'SrvChrg' => [ // arr
+			[
+				'GlSrvCd' => [ // obj
+					'GlProdSrvClssCd' => $LnSrvChrgGlSrvCdGlProdSrvClssCd
+				],
+				'Amt' => [ // obj
+					'$' => $LnSrvChrgAmt,
+					'CurCd' => $LnSrvChrgAmtCurCd
+				]
+			]
+		],
+		'CustChrg' => [ // arr
+			[
+				'TyCd' => $LnCustChrgTyCd2,
+				'Cat' => $LnCustChrgCat,
+				'Rt' => $LnCustChrgRt,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt,
+					'CurCd' => $LnCustChrgAmtCurCd
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd,
+				'Cat' => $LnCustChrgCat2,
+				'Rt' => $LnCustChrgRt2,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt2,
+					'CurCd' => $LnCustChrgAmtCurCd2
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd3,
+				'Cat' => $LnCustChrgCat3,
+				'Rt' => $LnCustChrgRt3,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt3,
+					'CurCd' => $LnCustChrgAmtCurCd3
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd4,
+				'Cat' => $LnCustChrgCat4,
+				'Rt' => $LnCustChrgRt4,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt4,
+					'CurCd' => $LnCustChrgAmtCurCd4
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd5,
+				'Cat' => $LnCustChrgCat5,
+				'Rt' => $LnCustChrgRt5,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt5,
+					'CurCd' => $LnCustChrgAmtCurCd55
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd6,
+				'Cat' => $LnCustChrgCat6,
+				'Rt' => $LnCustChrgRt6,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt6,
+					'CurCd' => $LnCustChrgAmtCurCd6
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd7,
+				'Cat' => $LnCustChrgCat7,
+				'Rt' => $LnCustChrgRt7,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt7,
+					'CurCd' => $LnCustChrgAmtCurCd7
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd8,
+				'Cat' => $LnCustChrgCat8,
+				'Rt' => $LnCustChrgRt8,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt8,
+					'CurCd' => $LnCustChrgAmtCurCd8
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd9,
+				'Cat' => $LnCustChrgCat9,
+				'Rt' => $LnCustChrgRt9,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt9,
+					'CurCd' => $LnCustChrgAmtCurCd9
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd10,
+				'Cat' => $LnCustChrgCat10,
+				'Rt' => $LnCustChrgRt10,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt10,
+					'CurCd' => $LnCustChrgAmtCurCd10
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd11,
+				'Cat' => $LnCustChrgCat11,
+				'Rt' => $LnCustChrgRt11,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt11,
+					'CurCd' => $LnCustChrgAmtCurCd11
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd12,
+				'Cat' => $LnCustChrgCat12,
+				'Rt' => $LnCustChrgRt12,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt12,
+					'CurCd' => $LnCustChrgAmtCurCd12
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd13,
+				'Cat' => $LnCustChrgCat13,
+				'Rt' => $LnCustChrgRt13,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt13,
+					'CurCd' => $LnCustChrgAmtCurCd13
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd14,
+				'Cat' => $LnCustChrgCat14,
+				'Rt' => $LnCustChrgRt14,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt14,
+					'CurCd' => $LnCustChrgAmtCurCd14
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd15,
+				'Cat' => $LnCustChrgCat15,
+				'Rt' => $LnCustChrgRt15,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt15,
+					'CurCd' => $LnCustChrgAmtCurCd15
+				]
+			],
+			[
+				'TyCd' => $LnCustChrgTyCd16,
+				'Cat' => $LnCustChrgCat16,
+				'Rt' => $LnCustChrgRt16,
+				'Amt' => [ // obj
+					'$' => $LnCustChrgAmt16,
+					'CurCd' => $LnCustChrgAmtCurCd16
+				]
+			]
 
-$RegDec = [ // obj
-	'DocId' => $DocId,
-	'RegDecNo' => $RegDecNo,
-	'TyCd' => $TyCd,
-	'Fnc' => $Fnc,
-	'ExpDt' => $ExpDt,
-	'St' => $St,
-	'AcpDt' => $AcpDt,
-	'DatElGrp' => $DatElGrp,
-	'Meas' => $Meas,
-	'TotNoOfArtcl' => $TotNoOfArtcl,
-	'AscDoc' => $AscDoc,
-	'GovProcTyCd' => $GovProcTyCd,
-	'BsnPty' => $BsnPty,
-	'CurCd' => $CurCd,
-	'MonAmt' => $MonAmt,
-	'CustChrg' => $CustChrg,
-	'GI' => $GI,
-	'PrefTreatment' => $PrefTreatment, // *Not found in schema
-	'ExchRt' => $ExchRt_json,
-	'ReglBdCd' => $ReglBdCd,
-	'Cust' => $Cust,
-	'DngGdsInd' => $DngGdsInd,
-	'Customs Form Description' => $CustomsFormDescription, // *Not found in schema
-	'RespStatus' => $RespStatus,
-	'Mvmt' => $Mvmt,
-	'Shp' => $Shp
+		],
+		'PrefTreatment' => [
+			'Ind' => $LnPrefTreatmentInd,
+			'TyCd' => $LnPrefTreatmentTyCd,
+			'Nm' => $LnPrefTreatmentNm
+		],
+		'PrevGovProcTyCd' => $LnPrevGovProcTyCd
+	]
+];
+
+$RegDec = [ // arr
+	[
+		'DocId' => $DocId,
+		'RegDecNo' => $RegDecNo,
+		'TyCd' => $TyCd,
+		'Fnc' => $Fnc,
+		'ExpDt' => $ExpDt,
+		'St' => $St,
+		'AcpDt' => $AcpDt,
+		'DatElGrp' => $DatElGrp,
+		'Meas' => $Meas,
+		'TotNoOfArtcl' => $TotNoOfArtcl,
+		'AscDoc' => $AscDoc,
+		'GovProcTyCd' => $GovProcTyCd,
+		'BsnPty' => $BsnPty,
+		'CurCd' => $CurCd,
+		'MonAmt' => $MonAmt,
+		'CustChrg' => $CustChrg,
+		'GI' => $GI,
+		'PrefTreatment' => $PrefTreatment, // *Not found in schema
+		'ExchRt' => $ExchRt_component,
+		'ReglBdCd' => $ReglBdCd,
+		'Cust' => $Cust,
+		'DngGdsInd' => $DngGdsInd,
+		'Customs Form Description' => $CustomsFormDescription, // *Not found in schema
+		'RespStatus' => $RespStatus,
+		'Mvmt' => $Mvmt,
+		'Shp' => $Shp,
+		'Ln' => $Ln
+	]
 ];
 
 $Bd = [
